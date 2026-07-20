@@ -42,15 +42,15 @@ export default function App() {
     }
 
     if (shouldScroll) {
-      requestAnimationFrame(() => {
+      setTimeout(() => {
         const targetId = id === 'about' ? 'about' : 'research';
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
           const yOffset = id === 'about' ? 0 : -90;
-          const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          const y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
           window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
         }
-      });
+      }, 100);
     }
   }, []);
 

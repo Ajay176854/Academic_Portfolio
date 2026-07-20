@@ -75,15 +75,15 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
           </div>
 
           {/* Tab Output Workspace */}
-          <div className="bg-transparent" id="tab-content-area">
-            <AnimatePresence mode="wait">
+          <div className="bg-transparent relative" id="tab-content-area">
+            <AnimatePresence>
               <motion.div
                 key={activeTab}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.35, ease: 'easeOut' }}
-                className="w-full"
+                exit={{ opacity: 0, y: -15, position: 'absolute', width: '100%' }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className="w-full relative"
               >
                 {activeTab === 'breakthroughs' && <ResearchAccomplishments />}
                 
