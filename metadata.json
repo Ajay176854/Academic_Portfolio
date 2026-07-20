@@ -1,0 +1,6 @@
+{
+  "name": "Academic Portfolio",
+  "description": "A professional portfolio showcasing research, publications, education, awards, and projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
