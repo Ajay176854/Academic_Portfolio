@@ -33,18 +33,18 @@ const PUBLISHERS_INDEXING = [
 
 export function CollaborationsBanner() {
   return (
-    <section className="py-16 bg-white border-y border-[#819280]/20" id="collaborations-showcase">
+    <section className="py-16 bg-white/90 backdrop-blur-md border-y border-[#3B82F6]/15" id="collaborations-showcase">
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
         
         {/* Academic Collaborations Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
-          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#5d735a]">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#3B82F6]">
             global & national network
           </span>
-          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-[#2d3a28]">
+          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-[#0F172A]">
             Academic & Research Institutional Collaborations
           </h2>
-          <p className="text-xs md:text-sm text-[#5d735a] leading-relaxed">
+          <p className="text-xs md:text-sm text-[#475569] leading-relaxed">
             Collaborative research networks across leading international universities, national institutes of excellence, and government laboratories.
           </p>
         </div>
@@ -52,7 +52,7 @@ export function CollaborationsBanner() {
         {/* International & National Grid */}
         <div className="space-y-12">
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#2d3a28] mb-6 border-b border-[#819280]/15 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#1E3A8A] mb-6 border-b border-[#3B82F6]/15 pb-3">
               International & National Partner Universities & Research Institutes
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
@@ -66,7 +66,7 @@ export function CollaborationsBanner() {
                 >
                   <motion.div
                     whileHover={{ y: -4, scale: 1.04 }}
-                    className="bg-white p-3 rounded-2xl border border-[#819280]/20 shadow-sm hover:shadow-md hover:border-[#5d735a]/50 transition-all flex flex-col items-center justify-center h-24 w-44 md:w-56 overflow-hidden group cursor-pointer"
+                    className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-44 md:w-56 overflow-hidden group cursor-pointer"
                   >
                     <img
                       src={item.logo}
@@ -82,7 +82,7 @@ export function CollaborationsBanner() {
 
           {/* Research Funding Sponsors */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#5d735a] mb-6 border-b border-[#819280]/15 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#3B82F6] mb-6 border-b border-[#3B82F6]/15 pb-3">
               Government Research Grant & Funding Bodies
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-5xl mx-auto">
@@ -96,7 +96,7 @@ export function CollaborationsBanner() {
                 >
                   <motion.div
                     whileHover={{ y: -4, scale: 1.04 }}
-                    className="bg-white p-3 rounded-2xl border border-[#819280]/20 shadow-sm hover:shadow-md hover:border-[#5d735a]/50 transition-all flex flex-col items-center justify-center h-24 w-52 md:w-60 group cursor-pointer"
+                    className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-52 md:w-60 group cursor-pointer"
                   >
                     <img
                       src={agency.logo}
@@ -112,7 +112,7 @@ export function CollaborationsBanner() {
 
           {/* High Impact Publishers & Indexing */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#5d735a] mb-6 border-b border-[#819280]/15 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#3B82F6] mb-6 border-b border-[#3B82F6]/15 pb-3">
               High-Impact Publishers & Academic Indexing
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
@@ -126,7 +126,7 @@ export function CollaborationsBanner() {
                 >
                   <motion.div
                     whileHover={{ y: -4, scale: 1.04 }}
-                    className="bg-white p-3 rounded-2xl border border-[#819280]/20 shadow-sm hover:shadow-md hover:border-[#5d735a]/50 transition-all flex items-center justify-center h-20 w-44 md:w-52 group cursor-pointer"
+                    className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex items-center justify-center h-20 w-44 md:w-52 group cursor-pointer"
                   >
                     <img
                       src={pub.logo}

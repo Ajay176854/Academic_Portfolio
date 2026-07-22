@@ -10,7 +10,12 @@ interface HeroProps {
 
 export function Hero({ updateActiveNav }: HeroProps) {
   return (
-    <section id="about" className="pt-32 pb-20 md:pt-40 md:pb-24 bg-gradient-to-b from-[#5d735a]/5 via-transparent to-transparent scroll-mt-24 md:scroll-mt-28">
+    <section id="about" className="relative pt-32 pb-20 md:pt-40 md:pb-24 bg-gradient-to-b from-[#3B82F6]/5 via-transparent to-transparent scroll-mt-24 md:scroll-mt-28">
+      
+      {/* Subtle Blue & Thermal Red Ambient Glows */}
+      <div className="absolute top-1/4 left-1/12 w-96 h-96 bg-[#3B82F6]/10 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-1/12 w-96 h-96 bg-[#EF4444]/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         
         {/* Intro Grid */}
@@ -24,17 +29,12 @@ export function Hero({ updateActiveNav }: HeroProps) {
               transition={{ duration: 0.6 }}
               className="space-y-4"
             >
-              <div className="inline-flex items-center gap-2 bg-[#5d735a]/10 text-[#2d3a28] px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#5d735a] animate-ping"></span>
-                <span>Thermoelectric Research Laboratory</span>
-              </div>
-              
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[#2d3a28] leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[#0F172A] leading-tight tracking-tight">
                 Engineering Next-Generation Low-Dimensional Materials for Energy Harvesting
               </h1>
               
-              <h2 className="text-base sm:text-lg md:text-xl font-medium text-[#5d735a]">
-                {PROFILE.name} • <span className="italic">{PROFILE.title}</span>
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-[#1E3A8A]">
+                {PROFILE.name} • <span className="italic font-normal text-[#3B82F6]">{PROFILE.title}</span>
               </h2>
             </motion.div>
 
@@ -42,7 +42,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-sm md:text-base text-[#36453b] leading-relaxed max-w-3xl space-y-4"
+              className="text-sm md:text-base text-[#334155] leading-relaxed max-w-3xl space-y-4"
             >
               <p>{PROFILE.bio}</p>
             </motion.div>
@@ -53,19 +53,21 @@ export function Hero({ updateActiveNav }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex flex-wrap items-center gap-4 pt-2"
             >
+              {/* Primary CTA Button */}
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); updateActiveNav('contact', true); }}
-                className="inline-flex items-center gap-2 bg-[#2d3a28] hover:bg-[#5d735a] text-[#FAF6EE] px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all shadow-sm cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-gradient-to-r hover:from-[#1E3A8A] hover:via-[#3B82F6] hover:to-[#EF4444] text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-sm cursor-pointer"
                 id="hero-btn-contact"
               >
                 <span>Contact Collaboration</span>
               </a>
               
+              {/* Secondary CTA Button */}
               <a
                 href="#publications"
                 onClick={(e) => { e.preventDefault(); updateActiveNav('publications', true); }}
-                className="inline-flex items-center gap-2 bg-[#5d735a]/10 hover:bg-[#5d735a]/20 text-[#2d3a28] px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 bg-white border border-[#3B82F6] text-[#1E3A8A] hover:border-[#EF4444] hover:shadow-[0_0_15px_rgba(239,68,68,0.25)] px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer"
                 id="hero-btn-publications"
               >
                 <span>Publications Catalog</span>
@@ -73,69 +75,69 @@ export function Hero({ updateActiveNav }: HeroProps) {
             </motion.div>
           </div>
 
-          {/* Affiliations Sidebar */}
+          {/* Affiliations Sidebar / Right Profile Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-4 bg-white p-6 rounded-2xl border border-[#819280]/20 shadow-sm space-y-6"
+            className="lg:col-span-4 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-[#3B82F6]/25 shadow-sm space-y-6 hover:border-[#EF4444]/40 hover:shadow-[0_4px_25px_rgba(239,68,68,0.2)] transition-all duration-300 group"
             id="hero-affiliation-sidebar"
           >
             {/* Dr. Abinaya Rengarajan Profile Photo */}
-            <div className="overflow-hidden rounded-xl border border-[#819280]/20 shadow-sm">
+            <div className="overflow-hidden rounded-xl border border-[#3B82F6]/20 shadow-xs">
               <img
                 src="/Abinaya.jpeg"
                 alt="Dr. Abinaya Rengarajan"
-                className="w-full h-64 md:h-72 object-cover object-top hover:scale-105 transition-transform duration-500"
+                className="w-full h-64 md:h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
             </div>
 
             <div>
-              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#5d735a] mb-3">
+              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#3B82F6] mb-3">
                 Current Institutional Post
               </h3>
               <div className="flex gap-3 items-start">
                 <img 
                   src="/images/logos/agh.png" 
                   alt="AGH University Logo" 
-                  className="h-11 w-11 object-contain bg-white p-1 rounded-lg border border-[#819280]/20 shadow-sm mt-0.5 shrink-0"
+                  className="h-11 w-11 object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs mt-0.5 shrink-0"
                 />
                 <div className="space-y-1">
-                  <p className="text-xs font-bold text-[#2d3a28]">
+                  <p className="text-xs font-bold text-[#0F172A]">
                     AGH University of Krakow, Poland
                   </p>
-                  <p className="text-[11px] text-[#5d735a] font-medium leading-relaxed">
+                  <p className="text-[11px] text-[#475569] font-medium leading-relaxed">
                     Post-Doctoral Fellow (Thermoelectrics) <br />
                     Supervisor: Prof. Krzysztof Wojciechowski
                   </p>
-                  <span className="inline-block text-[9px] font-mono font-bold bg-[#819280]/25 text-[#2d3a28] px-2 py-0.5 rounded mt-1">
+                  <span className="inline-block text-[9px] font-mono font-bold bg-[#3B82F6]/15 text-[#1E3A8A] px-2 py-0.5 rounded mt-1">
                     May 2024 – Present
                   </span>
                 </div>
               </div>
             </div>
 
-            <hr className="border-[#819280]/15" />
+            <hr className="border-[#3B82F6]/15" />
 
             <div>
-              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#5d735a] mb-3">
+              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#3B82F6] mb-3">
                 Prior Research Affiliation
               </h3>
               <div className="flex gap-3 items-start">
                 <img 
                   src="/images/logos/srm.png" 
                   alt="SRM Institute Logo" 
-                  className="h-11 w-11 object-contain bg-white p-1 rounded-lg border border-[#819280]/20 shadow-sm mt-0.5 shrink-0"
+                  className="h-11 w-11 object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs mt-0.5 shrink-0"
                 />
                 <div className="space-y-1">
-                  <p className="text-xs font-bold text-[#2d3a28]">
+                  <p className="text-xs font-bold text-[#0F172A]">
                     SRM Institute of Science & Tech, India
                   </p>
-                  <p className="text-[11px] text-[#5d735a] font-medium leading-relaxed">
+                  <p className="text-[11px] text-[#475569] font-medium leading-relaxed">
                     Post-Doctoral Fellow <br />
                     Supervisor: Prof. S. Ponnusamy
                   </p>
-                  <span className="inline-block text-[9px] font-mono font-bold bg-[#819280]/15 text-[#36453b] px-2 py-0.5 rounded mt-1">
+                  <span className="inline-block text-[9px] font-mono font-bold bg-slate-100 text-[#475569] px-2 py-0.5 rounded mt-1">
                     Nov 2021 – Mar 2024
                   </span>
                 </div>
@@ -147,7 +149,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
 
         {/* Metrics Bar */}
         <div className="mt-12">
-          <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#5d735a] border-b border-[#819280]/20 pb-2 mb-4">
+          <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#3B82F6] border-b border-[#3B82F6]/20 pb-2 mb-4">
             Consolidated Research Impact metrics
           </h3>
           <MetricsShowcase />

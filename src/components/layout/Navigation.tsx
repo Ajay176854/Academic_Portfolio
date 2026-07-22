@@ -41,7 +41,7 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#FAF6EE]/85 backdrop-blur-md py-3 shadow-sm border-b border-[#819280]/15'
+          ? 'bg-[#F8FAFC]/90 backdrop-blur-md py-3 shadow-xs border-b border-[#3B82F6]/15'
           : 'bg-transparent py-5'
       }`}
     >
@@ -52,10 +52,10 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
           onClick={(e) => handleNavClick(e, NAV_LINKS[0])}
           className="group flex flex-col justify-start shrink-0 mr-8 lg:mr-16"
         >
-          <span className="font-serif font-extrabold text-base md:text-lg tracking-tight text-[#2d3a28] group-hover:text-[#5d735a] transition-colors leading-tight">
+          <span className="font-serif font-extrabold text-base md:text-lg tracking-tight text-[#0F172A] group-hover:text-[#3B82F6] transition-colors leading-tight">
             {PROFILE.name}
           </span>
-          <span className="text-[7.5px] sm:text-[8.5px] md:text-[9px] font-mono font-bold uppercase tracking-tight text-[#5d735a] leading-tight mt-0.5 whitespace-nowrap">
+          <span className="text-[7.5px] sm:text-[8.5px] md:text-[9px] font-mono font-bold uppercase tracking-tight text-[#3B82F6] leading-tight mt-0.5 whitespace-nowrap">
             Ph.D. • Thermoelectrics & Optoelectronics
           </span>
         </a>
@@ -71,8 +71,8 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
                 onClick={(e) => handleNavClick(e, link)}
                 className={`text-[11px] font-bold uppercase tracking-widest transition-colors py-1 px-1 border-b-2 relative ${
                   isLinkActive
-                    ? 'text-[#2d3a28] border-[#2d3a28]'
-                    : 'text-[#5d735a] border-transparent hover:text-[#2d3a28]'
+                    ? 'text-[#0F172A] border-[#3B82F6]'
+                    : 'text-[#475569] border-transparent hover:text-[#0F172A]'
                 }`}
                 id={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
@@ -86,18 +86,18 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
               href={PROFILE.scholar}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 bg-[#2d3a28] hover:bg-[#5d735a] text-[#FAF6EE] text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-gradient-to-r hover:from-[#1E3A8A] hover:via-[#3B82F6] hover:to-[#EF4444] text-white text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-lg transition-all shadow-xs cursor-pointer"
               id="nav-btn-scholar"
             >
               <span>Scholar</span>
-              <GraduationCap size={12} />
+              <GraduationCap size={13} />
             </a>
           )}
         </div>
 
         {/* Mobile Nav Toggle */}
         <button
-          className="lg:hidden text-[#2d3a28] p-1 rounded-lg bg-[#5d735a]/10"
+          className="lg:hidden text-[#0F172A] p-1.5 rounded-lg bg-[#3B82F6]/10 hover:bg-[#3B82F6]/20 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Navigation Menu"
         >
@@ -112,7 +112,7 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#FAF6EE] border-t border-[#819280]/20 overflow-hidden shadow-lg"
+            className="lg:hidden bg-[#F8FAFC]/95 backdrop-blur-md border-t border-[#3B82F6]/20 overflow-hidden shadow-lg"
           >
             <div className="px-6 py-6 space-y-4 flex flex-col">
               {NAV_LINKS.map((link) => {
@@ -124,8 +124,8 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
                     onClick={(e) => handleNavClick(e, link)}
                     className={`text-xs font-bold uppercase tracking-wider py-2 border-l-2 pl-3 ${
                       isLinkActive
-                        ? 'text-[#2d3a28] border-[#2d3a28] bg-[#5d735a]/10'
-                        : 'text-[#5d735a] border-transparent hover:text-[#2d3a28]'
+                        ? 'text-[#0F172A] border-[#3B82F6] bg-[#3B82F6]/10'
+                        : 'text-[#475569] border-transparent hover:text-[#0F172A]'
                     }`}
                   >
                     {link.name}
@@ -138,7 +138,7 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
                   href={PROFILE.scholar}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#2d3a28] text-[#FAF6EE] text-xs font-bold uppercase tracking-wider py-2.5 rounded-lg mt-2"
+                  className="inline-flex items-center justify-center gap-2 bg-[#1E3A8A] text-white text-xs font-bold uppercase tracking-wider py-2.5 rounded-lg mt-2 shadow-xs"
                 >
                   <span>Google Scholar Profile</span>
                   <GraduationCap size={14} />

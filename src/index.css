@@ -12,21 +12,32 @@ html {
 }
 
 body {
-  @apply bg-[#FAF6EE] text-[#2c3531] font-sans antialiased;
+  @apply bg-[#F8FAFC] text-[#0F172A] font-sans antialiased selection:bg-[#3B82F6]/20 selection:text-[#1E3A8A];
 }
 
-/* Custom subtle scrollbar styling */
+/* Thermodynamics custom utilities & scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(93, 115, 90, 0.05);
+  background: rgba(30, 58, 138, 0.03);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(93, 115, 90, 0.2);
+  background: rgba(59, 130, 246, 0.25);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(93, 115, 90, 0.4);
+  background: rgba(239, 68, 68, 0.4);
+}
+
+/* Glassmorphism cards */
+.thermo-card {
+  @apply bg-white/90 backdrop-blur-md border border-[#3B82F6]/15 shadow-sm transition-all duration-300;
+}
+.thermo-card-hover {
+  @apply hover:border-[#3B82F6]/40 hover:shadow-[0_4px_20px_rgba(59,130,246,0.12)] hover:-translate-y-0.5;
+}
+.thermo-card-glow-red {
+  @apply hover:border-[#EF4444]/40 hover:shadow-[0_4px_20px_rgba(239,68,68,0.2)];
 }

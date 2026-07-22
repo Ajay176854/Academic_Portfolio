@@ -18,43 +18,43 @@ export function GrantsList() {
     <div className="space-y-8" id="grants-list">
       {/* Dynamic Summary Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-white p-5 rounded-xl border border-[#819280]/20 flex items-center gap-4">
-          <div className="p-3 rounded-xl bg-[#5d735a]/10 text-[#2d3a28]">
+        <div className="bg-white p-5 rounded-xl border border-[#3B82F6]/20 shadow-2xs flex items-center gap-4 hover:border-[#EF4444]/40 transition-colors">
+          <div className="p-3 rounded-xl bg-[#3B82F6]/10 text-[#1E3A8A]">
             <DollarSign size={20} />
           </div>
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-[#5d735a] block">
+            <span className="text-[10px] font-mono font-bold uppercase text-[#3B82F6] block">
               Cumulative Funding Invoiced
             </span>
-            <span className="text-base md:text-lg font-bold text-[#2d3a28]">
+            <span className="text-base md:text-lg font-bold text-[#0F172A]">
               {totalFunding}
             </span>
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-xl border border-[#819280]/20 flex items-center gap-4">
-          <div className="p-3 rounded-xl bg-[#5d735a]/10 text-[#2d3a28]">
+        <div className="bg-white p-5 rounded-xl border border-[#3B82F6]/20 shadow-2xs flex items-center gap-4 hover:border-[#EF4444]/40 transition-colors">
+          <div className="p-3 rounded-xl bg-[#3B82F6]/10 text-[#1E3A8A]">
             <Clock size={20} />
           </div>
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-[#5d735a] block">
+            <span className="text-[10px] font-mono font-bold uppercase text-[#3B82F6] block">
               Active Ongoing Projects
             </span>
-            <span className="text-base md:text-lg font-bold text-[#2d3a28]">
+            <span className="text-base md:text-lg font-bold text-[#0F172A]">
               {activeCount} Research Grants
             </span>
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-xl border border-[#819280]/20 flex items-center gap-4">
-          <div className="p-3 rounded-xl bg-[#5d735a]/10 text-[#2d3a28]">
+        <div className="bg-white p-5 rounded-xl border border-[#3B82F6]/20 shadow-2xs flex items-center gap-4 hover:border-[#EF4444]/40 transition-colors">
+          <div className="p-3 rounded-xl bg-[#3B82F6]/10 text-[#1E3A8A]">
             <Briefcase size={20} />
           </div>
           <div>
-            <span className="text-[10px] font-mono font-bold uppercase text-[#5d735a] block">
+            <span className="text-[10px] font-mono font-bold uppercase text-[#3B82F6] block">
               Total Funded Projects
             </span>
-            <span className="text-base md:text-lg font-bold text-[#2d3a28]">
+            <span className="text-base md:text-lg font-bold text-[#0F172A]">
               {GRANTS.length} Projects
             </span>
           </div>
@@ -62,10 +62,10 @@ export function GrantsList() {
       </div>
 
       {/* Filter Segment Buttons */}
-      <div className="flex items-center justify-between border-b border-[#819280]/10 pb-4">
+      <div className="flex items-center justify-between border-b border-[#3B82F6]/15 pb-4">
         <div className="flex items-center gap-2">
-          <ListFilter size={16} className="text-[#5d735a]" />
-          <span className="text-xs font-bold uppercase text-[#5d735a] tracking-wider">
+          <ListFilter size={16} className="text-[#3B82F6]" />
+          <span className="text-xs font-bold uppercase text-[#3B82F6] tracking-wider">
             Filter Projects
           </span>
         </div>
@@ -74,10 +74,10 @@ export function GrantsList() {
             <button
               key={status}
               onClick={() => setStatusFilter(status)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                 statusFilter === status
-                  ? 'bg-[#2d3a28] text-white'
-                  : 'bg-[#5d735a]/10 text-[#2d3a28] hover:bg-[#5d735a]/20'
+                  ? 'bg-[#1E3A8A] text-white shadow-2xs'
+                  : 'bg-[#3B82F6]/10 text-[#1E3A8A] hover:bg-[#3B82F6]/20'
               }`}
               id={`grant-filter-btn-${status}`}
             >
@@ -90,7 +90,7 @@ export function GrantsList() {
       {/* Grants Cards */}
       <div className="grid grid-cols-1 gap-6">
         <AnimatePresence mode="popLayout">
-          {filteredGrants.map((grant, index) => (
+          {filteredGrants.map((grant) => (
             <motion.div
               key={grant.id}
               layout
@@ -98,26 +98,26 @@ export function GrantsList() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.3 }}
-              className="bg-white p-6 rounded-xl border border-[#819280]/20 shadow-sm hover:border-[#5d735a]/40 hover:shadow-md transition-all duration-300 relative overflow-hidden"
+              className="bg-white p-6 rounded-xl border border-[#3B82F6]/20 shadow-2xs hover:border-[#EF4444]/40 hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] transition-all duration-300 relative overflow-hidden"
             >
               <div className={`absolute top-0 left-0 w-1.5 h-full ${
-                grant.status === 'Ongoing' ? 'bg-[#5d735a]' : 'bg-[#819280]/50'
+                grant.status === 'Ongoing' ? 'bg-[#EF4444]' : 'bg-[#3B82F6]/40'
               }`}></div>
 
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
                 <div className="flex items-center gap-3">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-[#5d735a]/10 text-[#2d3a28] px-2.5 py-1 rounded">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-50 text-[#1E3A8A] border border-[#3B82F6]/15 px-2.5 py-1 rounded">
                     {grant.agency}
                   </span>
-                  <span className="text-xs text-[#5d735a] font-bold font-mono">
+                  <span className="text-xs text-[#3B82F6] font-bold font-mono">
                     {grant.period}
                   </span>
                 </div>
                 
-                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${
                   grant.status === 'Ongoing'
-                    ? 'bg-[#5d735a]/15 text-[#2d3a28]'
-                    : 'bg-[#819280]/15 text-[#36453b]'
+                    ? 'bg-red-50 text-[#EF4444] border-red-200'
+                    : 'bg-blue-50 text-[#1E3A8A] border-blue-200'
                 }`}>
                   {grant.status === 'Ongoing' ? (
                     <>
@@ -133,24 +133,24 @@ export function GrantsList() {
                 </span>
               </div>
 
-              <h4 className="text-sm md:text-base font-bold text-[#2d3a28] mb-3 leading-relaxed">
+              <h4 className="text-sm md:text-base font-bold text-[#0F172A] mb-3 leading-relaxed">
                 {grant.title}
               </h4>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-[#819280]/10 text-xs text-[#5d735a] font-medium">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-[#3B82F6]/10 text-xs text-[#475569] font-medium">
                 <div>
-                  <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#5d735a]/60 block mb-1">
+                  <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
                     Investigators
                   </span>
-                  <p className="text-sm font-semibold text-[#2d3a28]">
+                  <p className="text-sm font-semibold text-[#0F172A]">
                     {grant.piCoPi}
                   </p>
                 </div>
                 <div className="md:text-right">
-                  <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#5d735a]/60 block mb-1">
+                  <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
                     Award Funding Amount
                   </span>
-                  <p className="text-sm font-bold text-[#2d3a28]">
+                  <p className="text-sm font-bold text-[#1E3A8A]">
                     {grant.amount}
                   </p>
                 </div>

@@ -14,13 +14,13 @@ export function ResearchAccomplishments() {
   return (
     <div className="space-y-10" id="research-accomplishments">
       {/* Tab Switcher */}
-      <div className="flex border-b border-[#819280]/20 max-w-md">
+      <div className="flex border-b border-[#3B82F6]/20 max-w-md">
         <button
           onClick={() => setActiveSubTab('breakthroughs')}
-          className={`flex-1 py-3 text-sm font-bold tracking-wider uppercase text-center border-b-2 transition-all ${
+          className={`flex-1 py-3 text-sm font-bold tracking-wider uppercase text-center border-b-2 transition-all cursor-pointer ${
             activeSubTab === 'breakthroughs'
-              ? 'border-[#2d3a28] text-[#2d3a28]'
-              : 'border-transparent text-[#5d735a]/60 hover:text-[#2d3a28]'
+              ? 'border-[#3B82F6] text-[#0F172A]'
+              : 'border-transparent text-[#475569] hover:text-[#0F172A]'
           }`}
           id="tab-btn-breakthroughs"
         >
@@ -28,10 +28,10 @@ export function ResearchAccomplishments() {
         </button>
         <button
           onClick={() => setActiveSubTab('instruments')}
-          className={`flex-1 py-3 text-sm font-bold tracking-wider uppercase text-center border-b-2 transition-all ${
+          className={`flex-1 py-3 text-sm font-bold tracking-wider uppercase text-center border-b-2 transition-all cursor-pointer ${
             activeSubTab === 'instruments'
-              ? 'border-[#2d3a28] text-[#2d3a28]'
-              : 'border-transparent text-[#5d735a]/60 hover:text-[#2d3a28]'
+              ? 'border-[#3B82F6] text-[#0F172A]'
+              : 'border-transparent text-[#475569] hover:text-[#0F172A]'
           }`}
           id="tab-btn-instruments"
         >
@@ -46,12 +46,12 @@ export function ResearchAccomplishments() {
           transition={{ duration: 0.4 }}
           className="space-y-6"
         >
-          <div className="bg-[#5d735a]/5 p-6 rounded-2xl border border-[#819280]/20">
-            <h3 className="text-lg font-bold text-[#2d3a28] mb-4 flex items-center gap-2">
-              <Compass className="text-[#5d735a]" size={20} />
+          <div className="bg-slate-50/80 p-6 rounded-2xl border border-[#3B82F6]/20">
+            <h3 className="text-lg font-bold text-[#0F172A] mb-4 flex items-center gap-2">
+              <Compass className="text-[#3B82F6]" size={20} />
               Key Research Accomplishments & Innovations
             </h3>
-            <p className="text-sm text-[#36453b] leading-relaxed mb-6">
+            <p className="text-sm text-[#334155] leading-relaxed mb-6">
               Experimental research focusing on decoupling core thermoelectric trade-off relationships, 
               vacancy engineering, and developing flexible state-of-the-art multi-dimensional nanocomposites.
             </p>
@@ -63,17 +63,17 @@ export function ResearchAccomplishments() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-white p-5 rounded-xl border border-[#819280]/10 hover:border-[#5d735a]/30 hover:shadow-sm transition-all duration-200 flex gap-4 items-start"
+                  className="bg-white p-5 rounded-xl border border-[#3B82F6]/15 hover:border-[#EF4444]/40 hover:shadow-[0_2px_12px_rgba(239,68,68,0.15)] transition-all duration-200 flex gap-4 items-start group"
                 >
-                  <div className="p-1.5 rounded-lg bg-[#5d735a]/10 text-[#2d3a28] shrink-0 mt-0.5">
+                  <div className="p-1.5 rounded-lg bg-[#3B82F6]/10 text-[#1E3A8A] group-hover:bg-[#EF4444]/10 group-hover:text-[#EF4444] shrink-0 mt-0.5 transition-colors">
                     <ShieldCheck size={16} />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-sm text-[#2d3a28] font-medium leading-relaxed">
+                    <p className="text-sm text-[#0F172A] font-medium leading-relaxed">
                       {acc.text}
                     </p>
                     {acc.reference && (
-                      <span className="inline-block text-xs font-mono font-bold bg-[#5d735a]/10 text-[#2d3a28] px-2 py-0.5 rounded">
+                      <span className="inline-block text-xs font-mono font-bold bg-blue-50 text-[#1E3A8A] px-2 py-0.5 rounded border border-[#3B82F6]/15">
                         {acc.reference}
                       </span>
                     )}
@@ -98,10 +98,10 @@ export function ResearchAccomplishments() {
               <button
                 key={cat}
                 onClick={() => setInstrumentFilter(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide uppercase transition-colors ${
+                className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide uppercase transition-colors cursor-pointer ${
                   instrumentFilter === cat
-                    ? 'bg-[#2d3a28] text-[#E9EBE0]'
-                    : 'bg-[#5d735a]/10 text-[#2d3a28] hover:bg-[#5d735a]/20'
+                    ? 'bg-[#1E3A8A] text-white shadow-xs'
+                    : 'bg-[#3B82F6]/10 text-[#1E3A8A] hover:bg-[#3B82F6]/20'
                 }`}
                 id={`btn-filter-ins-${cat}`}
               >
@@ -117,41 +117,29 @@ export function ResearchAccomplishments() {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.04 }}
-                className="bg-white p-5 rounded-xl border border-[#819280]/25 shadow-sm flex gap-4 hover:border-[#5d735a]/40 transition-colors"
+                className="bg-white p-5 rounded-xl border border-[#3B82F6]/20 shadow-2xs flex gap-4 hover:border-[#EF4444]/40 hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] transition-all duration-300 group"
               >
                 <div className="shrink-0">
-                  <div className={`p-3 rounded-xl text-[#2d3a28] ${
-                    ins.category === 'Synthesis'
-                      ? 'bg-[#5d735a]/10 text-[#2d3a28]'
-                      : ins.category === 'Characterization'
-                      ? 'bg-[#819280]/15 text-[#2d3a28]'
-                      : 'bg-[#3a4a37]/10 text-[#3a4a37]'
-                  }`}>
+                  <div className="p-3 rounded-xl bg-[#3B82F6]/10 text-[#1E3A8A] group-hover:bg-[#EF4444]/10 group-hover:text-[#EF4444] transition-colors">
                     {ins.category === 'Synthesis' ? <Layers size={18} /> : ins.category === 'Characterization' ? <Cpu size={18} /> : <Wrench size={18} />}
                   </div>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1.5">
-                    <h4 className="font-bold text-[#2d3a28] text-sm md:text-base">{ins.name}</h4>
-                    <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-full ${
-                      ins.category === 'Synthesis'
-                        ? 'bg-[#5d735a]/10 text-[#2d3a28]'
-                        : ins.category === 'Characterization'
-                        ? 'bg-[#819280]/20 text-[#2d3a28]'
-                        : 'bg-[#3a4a37]/10 text-[#3a4a37]'
-                    }`}>
+                    <h4 className="font-bold text-[#0F172A] text-sm md:text-base">{ins.name}</h4>
+                    <span className="text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-full bg-blue-50 text-[#1E3A8A] border border-[#3B82F6]/15">
                       {ins.category}
                     </span>
                   </div>
-                  <p className="text-xs md:text-sm text-[#5d735a] leading-relaxed mb-3">
+                  <p className="text-xs md:text-sm text-[#475569] leading-relaxed mb-3">
                     {ins.details}
                   </p>
                   {ins.image && (
-                    <div className="mt-2 rounded-lg overflow-hidden border border-[#819280]/20 bg-[#FAF6EE] max-h-48 flex justify-center items-center">
+                    <div className="mt-2 rounded-lg overflow-hidden border border-[#3B82F6]/15 bg-[#F8FAFC] max-h-48 flex justify-center items-center">
                       <img 
                         src={ins.image} 
                         alt={ins.name} 
-                        className="w-full h-44 object-contain p-1 hover:scale-105 transition-transform duration-300" 
+                        className="w-full h-44 object-contain p-1 group-hover:scale-105 transition-transform duration-300" 
                       />
                     </div>
                   )}

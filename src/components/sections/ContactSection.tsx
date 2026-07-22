@@ -54,13 +54,13 @@ export function ContactSection() {
       {/* Contact Details Side */}
       <div className="lg:col-span-2 space-y-8">
         <div className="space-y-3">
-          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#5d735a] block">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#3B82F6] block">
             get in touch
           </span>
-          <h3 className="text-2xl font-extrabold text-[#2d3a28]">
+          <h3 className="text-2xl font-extrabold text-[#0F172A]">
             Scholarly Correspondence
           </h3>
-          <p className="text-sm text-[#5d735a] leading-relaxed">
+          <p className="text-sm text-[#475569] leading-relaxed">
             Please feel free to reach out for research collaboration proposals, peer review requests, 
             or questions regarding 2D TMDCs and thermoelectrics.
           </p>
@@ -69,14 +69,14 @@ export function ContactSection() {
         <div className="space-y-5">
           {/* Address */}
           <div className="flex gap-4">
-            <div className="p-3 bg-[#5d735a]/10 rounded-xl text-[#2d3a28] shrink-0 self-start">
+            <div className="p-3 bg-[#3B82F6]/10 rounded-xl text-[#1E3A8A] shrink-0 self-start">
               <MapPin size={18} />
             </div>
             <div>
-              <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#5d735a]/60 block mb-1">
+              <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
                 Primary Laboratory Address
               </span>
-              <p className="text-xs md:text-sm text-[#36453b] font-semibold leading-relaxed">
+              <p className="text-xs md:text-sm text-[#334155] font-semibold leading-relaxed">
                 {PROFILE.address}
               </p>
             </div>
@@ -84,16 +84,16 @@ export function ContactSection() {
 
           {/* Emails */}
           <div className="flex gap-4">
-            <div className="p-3 bg-[#5d735a]/10 rounded-xl text-[#2d3a28] shrink-0 self-start">
+            <div className="p-3 bg-[#3B82F6]/10 rounded-xl text-[#1E3A8A] shrink-0 self-start">
               <Mail size={18} />
             </div>
             <div className="space-y-1">
-              <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#5d735a]/60 block">
+              <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block">
                 Official & Personal Emails
               </span>
               <a
                 href={`mailto:${PROFILE.email}`}
-                className="block text-xs md:text-sm text-[#2d3a28] hover:text-[#5d735a] transition-colors font-semibold"
+                className="block text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-semibold"
                 id="contact-email-1"
               >
                 {PROFILE.email}
@@ -101,7 +101,7 @@ export function ContactSection() {
               {PROFILE.email2 && (
                 <a
                   href={`mailto:${PROFILE.email2}`}
-                  className="block text-xs md:text-sm text-[#2d3a28] hover:text-[#5d735a] transition-colors font-semibold"
+                  className="block text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-semibold"
                   id="contact-email-2"
                 >
                   {PROFILE.email2}
@@ -113,14 +113,14 @@ export function ContactSection() {
           {/* Phone Numbers */}
           {PROFILE.phone && (
             <div className="flex gap-4">
-              <div className="p-3 bg-[#5d735a]/10 rounded-xl text-[#2d3a28] shrink-0 self-start">
+              <div className="p-3 bg-[#3B82F6]/10 rounded-xl text-[#1E3A8A] shrink-0 self-start">
                 <Phone size={18} />
               </div>
               <div>
-                <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#5d735a]/60 block mb-1">
+                <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
                   Contact Telephones
                 </span>
-                <p className="text-xs md:text-sm text-[#36453b] font-mono font-bold">
+                <p className="text-xs md:text-sm text-[#334155] font-mono font-bold">
                   {PROFILE.phone}
                 </p>
               </div>
@@ -130,18 +130,18 @@ export function ContactSection() {
           {/* Google Scholar Link */}
           {PROFILE.scholar && (
             <div className="flex gap-4">
-              <div className="p-3 bg-[#5d735a]/10 rounded-xl text-[#2d3a28] shrink-0 self-start">
+              <div className="p-3 bg-[#3B82F6]/10 rounded-xl text-[#1E3A8A] shrink-0 self-start">
                 <GraduationCap size={18} />
               </div>
               <div>
-                <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#5d735a]/60 block mb-1">
+                <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
                   Research Profiles
                 </span>
                 <a
                   href={PROFILE.scholar}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs md:text-sm text-[#2d3a28] hover:text-[#5d735a] transition-colors font-bold underline decoration-[#5d735a]/30 decoration-2 underline-offset-4 flex items-center gap-1"
+                  className="text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-bold underline decoration-[#3B82F6]/30 decoration-2 underline-offset-4 flex items-center gap-1"
                   id="contact-scholar-link"
                 >
                   <span>Google Scholar Profile</span>
@@ -152,7 +152,7 @@ export function ContactSection() {
                     href={PROFILE.orcid}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs md:text-sm text-[#2d3a28] hover:text-[#5d735a] transition-colors font-bold underline decoration-[#5d735a]/30 decoration-2 underline-offset-4 flex items-center gap-1 mt-1"
+                    className="text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-bold underline decoration-[#3B82F6]/30 decoration-2 underline-offset-4 flex items-center gap-1 mt-1"
                     id="contact-orcid-link"
                   >
                     <span>ORCID (0000-0002-5199-109X)</span>
@@ -166,7 +166,7 @@ export function ContactSection() {
       </div>
 
       {/* Inquiry Form Side */}
-      <div className="lg:col-span-3 bg-white p-6 md:p-8 rounded-2xl border border-[#819280]/20 shadow-sm relative">
+      <div className="lg:col-span-3 bg-white/90 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:border-[#EF4444]/40 transition-colors relative">
         <AnimatePresence mode="wait">
           {!isSubmitted ? (
             <motion.form
@@ -178,13 +178,13 @@ export function ContactSection() {
               className="space-y-4"
               id="academic-contact-form"
             >
-              <h4 className="text-base md:text-lg font-bold text-[#2d3a28] pb-2 border-b border-[#819280]/10 mb-2">
+              <h4 className="text-base md:text-lg font-bold text-[#0F172A] pb-2 border-b border-[#3B82F6]/10 mb-2">
                 Send Academic Inquiry
               </h4>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
-                  <label className="text-[10px] font-mono font-bold uppercase text-[#5d735a]" htmlFor="contact-name">
+                  <label className="text-[10px] font-mono font-bold uppercase text-[#3B82F6]" htmlFor="contact-name">
                     Your Name *
                   </label>
                   <input
@@ -194,12 +194,12 @@ export function ContactSection() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Prof. / Dr. / Scholar Name"
-                    className="w-full bg-[#5d735a]/5 text-[#2d3a28] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#819280]/15 focus:outline-none focus:border-[#5d735a] transition-all"
+                    className="w-full bg-blue-50/50 text-[#0F172A] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#3B82F6]/15 focus:outline-none focus:border-[#3B82F6] transition-all"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[10px] font-mono font-bold uppercase text-[#5d735a]" htmlFor="contact-email-input">
+                  <label className="text-[10px] font-mono font-bold uppercase text-[#3B82F6]" htmlFor="contact-email-input">
                     Your Email *
                   </label>
                   <input
@@ -209,13 +209,13 @@ export function ContactSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@institution.edu"
-                    className="w-full bg-[#5d735a]/5 text-[#2d3a28] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#819280]/15 focus:outline-none focus:border-[#5d735a] transition-all"
+                    className="w-full bg-blue-50/50 text-[#0F172A] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#3B82F6]/15 focus:outline-none focus:border-[#3B82F6] transition-all"
                   />
                 </div>
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[10px] font-mono font-bold uppercase text-[#5d735a]" htmlFor="contact-institution">
+                <label className="text-[10px] font-mono font-bold uppercase text-[#3B82F6]" htmlFor="contact-institution">
                   Affiliated Institution / Organization
                 </label>
                 <input
@@ -224,19 +224,19 @@ export function ContactSection() {
                   value={institution}
                   onChange={(e) => setInstitution(e.target.value)}
                   placeholder="University, Lab, or Company"
-                  className="w-full bg-[#5d735a]/5 text-[#2d3a28] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#819280]/15 focus:outline-none focus:border-[#5d735a] transition-all"
+                  className="w-full bg-blue-50/50 text-[#0F172A] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#3B82F6]/15 focus:outline-none focus:border-[#3B82F6] transition-all"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[10px] font-mono font-bold uppercase text-[#5d735a]" htmlFor="contact-subject">
+                <label className="text-[10px] font-mono font-bold uppercase text-[#3B82F6]" htmlFor="contact-subject">
                   Inquiry Category
                 </label>
                 <select
                   id="contact-subject"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  className="w-full bg-[#5d735a]/5 text-[#2d3a28] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#819280]/15 focus:outline-none focus:border-[#5d735a] transition-all font-medium"
+                  className="w-full bg-blue-50/50 text-[#0F172A] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#3B82F6]/15 focus:outline-none focus:border-[#3B82F6] transition-all font-medium"
                 >
                   <option value="Research Collaboration Inquiry">Research Collaboration Proposal</option>
                   <option value="Review / Editorial Request">Peer Review / Editorial Invitation</option>
@@ -247,7 +247,7 @@ export function ContactSection() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[10px] font-mono font-bold uppercase text-[#5d735a]" htmlFor="contact-message">
+                <label className="text-[10px] font-mono font-bold uppercase text-[#3B82F6]" htmlFor="contact-message">
                   Correspondence Message *
                 </label>
                 <textarea
@@ -257,14 +257,14 @@ export function ContactSection() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Introduce your research goals or inquiry detail here..."
-                  className="w-full bg-[#5d735a]/5 text-[#2d3a28] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#819280]/15 focus:outline-none focus:border-[#5d735a] transition-all resize-none"
+                  className="w-full bg-blue-50/50 text-[#0F172A] text-xs md:text-sm px-4 py-2.5 rounded-lg border border-[#3B82F6]/15 focus:outline-none focus:border-[#3B82F6] transition-all resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#2d3a28] hover:bg-[#5d735a] text-white py-3 rounded-lg text-xs font-bold uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-sm disabled:opacity-50"
+                className="w-full bg-[#1E3A8A] hover:bg-gradient-to-r hover:from-[#1E3A8A] hover:via-[#3B82F6] hover:to-[#EF4444] text-white py-3 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-xs disabled:opacity-50"
                 id="contact-submit-btn"
               >
                 {isSubmitting ? (
@@ -288,14 +288,14 @@ export function ContactSection() {
               className="py-12 px-4 text-center space-y-6 flex flex-col items-center justify-center h-full"
               id="contact-success-panel"
             >
-              <div className="p-4 bg-[#5d735a]/10 text-[#2d3a28] rounded-full animate-pulse">
+              <div className="p-4 bg-blue-50 text-[#1E3A8A] rounded-full animate-pulse border border-[#3B82F6]/20">
                 <CheckCircle2 size={48} />
               </div>
               <div className="space-y-2">
-                <h4 className="text-xl font-bold text-[#2d3a28]">
+                <h4 className="text-xl font-bold text-[#0F172A]">
                   Correspondence Initiated!
                 </h4>
-                <p className="text-sm text-[#5d735a] leading-relaxed max-w-sm mx-auto">
+                <p className="text-sm text-[#475569] leading-relaxed max-w-sm mx-auto">
                   Thank you, <strong>{name}</strong>. Your scholarly query regarding 
                   <strong> {subject}</strong> has been simulation-delivered to Dr. Abinaya Rengarajan.
                 </p>
@@ -308,7 +308,7 @@ export function ContactSection() {
                   setInstitution('');
                   setMessage('');
                 }}
-                className="text-xs font-bold text-[#2d3a28] hover:text-[#5d735a] uppercase tracking-widest border-b border-[#2d3a28] pb-1 transition-all"
+                className="text-xs font-bold text-[#1E3A8A] hover:text-[#EF4444] uppercase tracking-widest border-b border-[#1E3A8A] pb-1 transition-all cursor-pointer"
                 id="contact-reset-btn"
               >
                 Send another message

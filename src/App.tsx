@@ -3,6 +3,7 @@ import { Navigation } from './components/layout/Navigation';
 import { Footer } from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import { NavSectionId } from './types';
+import { ThermodynamicBackground } from './components/ui/ThermodynamicBackground';
 
 const HASH_MAP: Record<string, NavSectionId> = {
   '#about': 'about',
@@ -69,15 +70,18 @@ export default function App() {
   }, [updateActiveNav]);
 
   return (
-    <div className="min-h-screen font-sans bg-[#FAF6EE] text-[#2c3531]">
-      {/* Exquisite Sticky Navigation */}
+    <div className="min-h-screen font-sans bg-[#F8FAFC] text-[#0F172A] relative overflow-x-hidden">
+      {/* Dynamic Thermal Energy & Wave Flow Decoration */}
+      <ThermodynamicBackground />
+
+      {/* Sticky Navigation */}
       <Navigation activeNav={activeNav} updateActiveNav={updateActiveNav} />
       
-      <main>
+      <main className="relative z-10">
         <HomePage activeNav={activeNav} updateActiveNav={updateActiveNav} />
       </main>
 
-      {/* Earthy Footer */}
+      {/* Footer */}
       <Footer />
     </div>
   );
