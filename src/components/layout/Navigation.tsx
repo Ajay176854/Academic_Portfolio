@@ -52,11 +52,11 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
           onClick={(e) => handleNavClick(e, NAV_LINKS[0])}
           className="group flex flex-col justify-start shrink-0 mr-8 lg:mr-16"
         >
-          <span className="font-serif font-extrabold text-base md:text-lg tracking-tight text-[#0F172A] group-hover:text-[#3B82F6] transition-colors leading-tight">
+          <span className="font-serif font-extrabold text-lg md:text-xl tracking-tight text-[#1E3A8A] group-hover:text-[#3B82F6] transition-colors leading-tight">
             {PROFILE.name}
           </span>
-          <span className="text-[7.5px] sm:text-[8.5px] md:text-[9px] font-mono font-bold uppercase tracking-tight text-[#3B82F6] leading-tight mt-0.5 whitespace-nowrap">
-            Ph.D. • Thermoelectrics & Optoelectronics
+          <span className="text-[8px] sm:text-[9px] md:text-[10px] font-mono font-bold uppercase tracking-wider text-[#1E3A8A] leading-tight mt-0.5 whitespace-nowrap">
+            Ph.D. • Thermoelectrics &amp; <span className="text-[#EF4444]">Optoelectronics</span>
           </span>
         </a>
 
@@ -69,10 +69,10 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link)}
-                className={`text-[11px] font-bold uppercase tracking-widest transition-colors py-1 px-1 border-b-2 relative ${
+                className={`text-[11px] font-bold uppercase tracking-widest transition-colors py-1.5 px-1 border-b-2 relative ${
                   isLinkActive
-                    ? 'text-[#0F172A] border-[#3B82F6]'
-                    : 'text-[#475569] border-transparent hover:text-[#0F172A]'
+                    ? 'text-[#1E3A8A] border-[#1E3A8A]'
+                    : 'text-[#475569] border-transparent hover:text-[#1E3A8A]'
                 }`}
                 id={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
@@ -86,18 +86,18 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
               href={PROFILE.scholar}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-gradient-to-r hover:from-[#1E3A8A] hover:via-[#3B82F6] hover:to-[#EF4444] text-white text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-lg transition-all shadow-xs cursor-pointer"
+              className="inline-flex items-center gap-1.5 bg-[#1E3A8A] hover:bg-[#2563EB] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg transition-all shadow-xs cursor-pointer"
               id="nav-btn-scholar"
             >
               <span>Scholar</span>
-              <GraduationCap size={13} />
+              <GraduationCap size={14} />
             </a>
           )}
         </div>
 
         {/* Mobile Nav Toggle */}
         <button
-          className="lg:hidden text-[#0F172A] p-1.5 rounded-lg bg-[#3B82F6]/10 hover:bg-[#3B82F6]/20 transition-colors"
+          className="lg:hidden text-[#1E3A8A] p-1.5 rounded-lg bg-[#3B82F6]/10 hover:bg-[#3B82F6]/20 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Navigation Menu"
         >
@@ -124,8 +124,8 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
                     onClick={(e) => handleNavClick(e, link)}
                     className={`text-xs font-bold uppercase tracking-wider py-2 border-l-2 pl-3 ${
                       isLinkActive
-                        ? 'text-[#0F172A] border-[#3B82F6] bg-[#3B82F6]/10'
-                        : 'text-[#475569] border-transparent hover:text-[#0F172A]'
+                        ? 'text-[#1E3A8A] border-[#1E3A8A] bg-[#3B82F6]/10'
+                        : 'text-[#475569] border-transparent hover:text-[#1E3A8A]'
                     }`}
                   >
                     {link.name}
