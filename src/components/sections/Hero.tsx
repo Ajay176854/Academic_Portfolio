@@ -82,7 +82,9 @@ export function Hero({ updateActiveNav }: HeroProps) {
               {/* Download CV Button (C-09) */}
               <a
                 href="/Abinaya_Rengarajan_CV.pdf"
-                download
+                download="Abinaya_Rengarajan_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white border border-[#3B82F6]/30 text-[#1E3A8A] hover:bg-blue-50/50 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer shadow-2xs"
                 id="hero-btn-download-cv"
               >
