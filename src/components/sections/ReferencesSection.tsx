@@ -1,4 +1,5 @@
 import { REFERENCES } from '../../data';
+import { Mail } from 'lucide-react';
 
 export function ReferencesSection() {
   return (
@@ -9,8 +10,11 @@ export function ReferencesSection() {
             professional endorsements
           </span>
           <h2 className="text-xl md:text-2xl font-serif font-extrabold text-[#0F172A]">
-            Academic Recommendations
+            Academic References
           </h2>
+          <p className="text-sm text-[#475569] leading-relaxed mt-2">
+            Detailed contact information available upon request.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -30,11 +34,9 @@ export function ReferencesSection() {
                   {ref.institution}
                 </p>
               </div>
-              <div className="space-y-1 pt-4 text-[11px] text-[#1E3A8A] font-mono font-bold">
-                <a href={`mailto:${ref.email}`} className="hover:text-[#EF4444] transition-colors block truncate">
-                  {ref.email}
-                </a>
-                {ref.phone && <span className="block text-[#475569]">{ref.phone}</span>}
+              <div className="pt-4 text-[11px] text-[#475569] font-mono font-bold flex items-center gap-1.5">
+                <Mail size={12} className="text-[#3B82F6]" />
+                <span>Contact details available upon request</span>
               </div>
             </div>
           ))}

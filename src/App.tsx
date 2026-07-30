@@ -14,6 +14,7 @@ const HASH_MAP: Record<string, NavSectionId> = {
   '#services': 'awards-services',
   '#awards-services': 'awards-services',
   '#timeline': 'timeline',
+  '#gallery': 'gallery',
   '#contact': 'contact',
 };
 
@@ -24,6 +25,7 @@ const ID_HASH_MAP: Record<NavSectionId, string> = {
   'grants': '#grants',
   'timeline': '#timeline',
   'awards-services': '#services',
+  'gallery': '#gallery',
   'contact': '#contact',
 };
 

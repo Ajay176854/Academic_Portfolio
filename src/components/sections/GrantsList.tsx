@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GRANTS } from '../../data';
-import { Award, Briefcase, Calendar, CheckCircle, Clock, DollarSign, ListFilter } from 'lucide-react';
+import { Award, Briefcase, Calendar, CheckCircle, Clock, DollarSign, ListFilter, User } from 'lucide-react';
 
 export function GrantsList() {
   const [statusFilter, setStatusFilter] = useState<'All' | 'Ongoing' | 'Completed'>('All');
@@ -10,8 +10,7 @@ export function GrantsList() {
     (g) => statusFilter === 'All' || g.status === statusFilter
   );
 
-  // Cumulative budget (150k + 34.9k + 32.8k + 30.3k + 27k + 4.5k + 8.1k) is approx ~288,000+ Euros
-  const totalFunding = "288,154+ Euros";
+  const totalFunding = "288,154 EUR";
   const activeCount = GRANTS.filter((g) => g.status === 'Ongoing').length;
 
   return (
@@ -24,10 +23,13 @@ export function GrantsList() {
           </div>
           <div>
             <span className="text-[10px] font-mono font-bold uppercase text-[#3B82F6] block">
-              Cumulative Funding Invoiced
+              Cumulative Funding Involved
             </span>
             <span className="text-base md:text-lg font-bold text-[#0F172A]">
-              {totalFunding}
+              ~ {totalFunding}
+            </span>
+            <span className="text-[10px] text-[#475569] font-medium block">
+              Combined value of projects contributed to
             </span>
           </div>
         </div>
@@ -109,7 +111,7 @@ export function GrantsList() {
                   <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-50 text-[#1E3A8A] border border-[#3B82F6]/15 px-2.5 py-1 rounded">
                     {grant.agency}
                   </span>
-                  <span className="text-xs text-[#3B82F6] font-bold font-mono">
+                  <span className="text-xs text-[#3B82F6] font-bold font-sans">
                     {grant.period}
                   </span>
                 </div>
@@ -117,7 +119,7 @@ export function GrantsList() {
                 <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${
                   grant.status === 'Ongoing'
                     ? 'bg-red-50 text-[#EF4444] border-red-200'
-                    : 'bg-blue-50 text-[#1E3A8A] border-blue-200'
+                    : 'bg-emerald-50 text-emerald-700 border-emerald-200'
                 }`}>
                   {grant.status === 'Ongoing' ? (
                     <>
@@ -127,7 +129,7 @@ export function GrantsList() {
                   ) : (
                     <>
                       <CheckCircle size={12} />
-                      <span>Concluded</span>
+                      <span>Completed</span>
                     </>
                   )}
                 </span>
@@ -137,7 +139,7 @@ export function GrantsList() {
                 {grant.title}
               </h4>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-[#3B82F6]/10 text-xs text-[#475569] font-medium">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-[#3B82F6]/10 text-xs text-[#475569] font-medium">
                 <div>
                   <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
                     Investigators
@@ -146,9 +148,20 @@ export function GrantsList() {
                     {grant.piCoPi}
                   </p>
                 </div>
+                {grant.role && (
+                  <div>
+                    <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
+                      <User size={10} className="inline mr-1" />
+                      Dr. Rengarajan's Role
+                    </span>
+                    <p className="text-sm font-semibold text-[#0F172A] capitalize">
+                      {grant.role}
+                    </p>
+                  </div>
+                )}
                 <div className="md:text-right">
                   <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block mb-1">
-                    Award Funding Amount
+                    Project Funding Amount
                   </span>
                   <p className="text-sm font-bold text-[#1E3A8A]">
                     {grant.amount}

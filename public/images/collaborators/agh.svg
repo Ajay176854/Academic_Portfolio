@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" width="420" height="150">
+  <rect width="420" height="150" fill="#ffffff"/>
+  <g transform="translate(15, 12)">
+    <!-- Left Green Stripes -->
+    <path d="M 15 10 C 15 10, 22 35, 22 60 C 22 80, 15 98, 15 98 L 26 98 C 26 98, 33 80, 33 60 C 33 35, 26 10, 26 10 Z" fill="#006A35"/>
+    <path d="M 31 10 C 31 10, 38 35, 38 60 C 38 80, 31 98, 31 98 L 42 98 C 42 98, 49 80, 49 60 C 49 35, 42 10, 42 10 Z" fill="#006A35"/>
+    <path d="M 47 10 C 47 10, 54 35, 54 60 C 54 80, 47 98, 47 98 L 58 98 C 58 98, 65 80, 65 60 C 65 35, 58 10, 58 10 Z" fill="#006A35"/>
+    
+    <!-- Right Red Stripes -->
+    <path d="M 72 10 C 72 10, 79 35, 79 60 C 79 80, 72 98, 72 98 L 83 98 C 83 98, 90 80, 90 60 C 90 35, 83 10, 83 10 Z" fill="#A6192E"/>
+    <path d="M 88 10 C 88 10, 95 35, 95 60 C 95 80, 88 98, 88 98 L 99 98 C 99 98, 106 80, 106 60 C 106 35, 99 10, 99 10 Z" fill="#A6192E"/>
+    <path d="M 104 10 C 104 10, 111 35, 111 60 C 111 80, 104 98, 104 98 L 115 98 C 115 98, 122 80, 122 60 C 122 35, 115 10, 115 10 Z" fill="#A6192E"/>
+
+    <!-- AGH text below emblem -->
+    <text x="65" y="123" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="24" letter-spacing="3" fill="#111827">AGH</text>
+
+    <!-- AGH UNIVERSITY OF KRAKOW text on the right -->
+    <text x="145" y="52" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#111827" letter-spacing="0.5">AGH UNIVERSITY</text>
+    <text x="145" y="88" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#111827" letter-spacing="0.5">OF KRAKOW</text>
+  </g>
+</svg>

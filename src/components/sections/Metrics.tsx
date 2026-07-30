@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { METRICS } from '../../data';
+import { METRICS, PROFILE } from '../../data';
 import { FileText, TrendingUp, Award, Users, AwardIcon } from 'lucide-react';
 
 export function MetricsShowcase() {
@@ -8,8 +8,8 @@ export function MetricsShowcase() {
       id: 'pubs',
       label: 'Peer-Reviewed Publications',
       value: METRICS.publications,
-      suffix: '+',
-      desc: 'High-Impact Journals',
+      suffix: '',
+      desc: 'Journals incl. JACS, Chem. Eng. J., Small',
       icon: FileText,
     },
     {
@@ -17,20 +17,21 @@ export function MetricsShowcase() {
       label: 'Google Scholar Citations',
       value: METRICS.citations,
       suffix: '',
-      desc: 'h-index: 14 | i10-index: 18',
+      desc: `h-index: ${METRICS.hIndex} · i10-index: ${METRICS.i10Index} (July 2026)`,
       icon: TrendingUp,
+      link: PROFILE.scholar,
     },
     {
       id: 'conferences',
       label: 'International Conferences',
       value: METRICS.conferences,
-      suffix: '+',
-      desc: 'Global Presentations',
+      suffix: '',
+      desc: 'Oral & Poster Presentations',
       icon: Award,
     },
     {
       id: 'grants',
-      label: 'Research Grants Involved',
+      label: 'Research Grants Contributed To',
       value: 7,
       suffix: '',
       desc: 'DST, SERB, CSIR, UGC-DAE',
@@ -68,16 +69,29 @@ export function MetricsShowcase() {
                 <span className="text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight">
                   {item.value}
                 </span>
-                <span className="text-xl font-bold text-[#EF4444]">
-                  {item.suffix}
-                </span>
+                {item.suffix && (
+                  <span className="text-xl font-bold text-[#EF4444]">
+                    {item.suffix}
+                  </span>
+                )}
               </div>
               <p className="text-sm font-semibold text-[#0F172A] mt-2 line-clamp-1">
                 {item.label}
               </p>
-              <p className="text-xs text-[#475569] font-medium mt-1">
-                {item.desc}
-              </p>
+              {'link' in item && item.link ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[#3B82F6] font-medium mt-1 hover:underline inline-block"
+                >
+                  {item.desc}
+                </a>
+              ) : (
+                <p className="text-xs text-[#475569] font-medium mt-1">
+                  {item.desc}
+                </p>
+              )}
             </div>
           </motion.div>
         );

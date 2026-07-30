@@ -4,10 +4,10 @@ export const EXPERIENCE: Experience[] = [
   {
     id: "exp-1",
     role: "Research Assistant Professor / Post-Doctoral Fellow",
-    institution: "AGH University of Krakow, Krakow, Poland",
+    institution: "AGH University of Kraków, Kraków, Poland",
     period: "May 2024 – Present",
-    details: "Thermoelectric Research Laboratory. Supervisor: Prof. Dr. Krzysztof Wojciechowski. Research on 2D nanomaterials for high-efficiency thermoelectric modules.",
-    logo: "/images/logos/agh.png"
+    details: "Thermoelectric Research Laboratory. Supervisor: Prof. Krzysztof T. Wojciechowski. Research on 2D nanomaterials for high-efficiency thermoelectric modules.",
+    logo: "/images/logos/agh.svg"
   },
   {
     id: "exp-2",

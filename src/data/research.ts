@@ -3,32 +3,32 @@ import { Accomplishment, Instrument } from '../types';
 export const ACCOMPLISHMENTS: Accomplishment[] = [
   {
     id: "acc-1",
-    text: "Achieved record thermoelectric figure-of-merit zT = 1.18 in MoS2 by engineering sulphur vacancies via MoO3 hole injection — among the highest reported for 2D TMDCs.",
+    text: "Achieved record thermoelectric figure-of-merit zT = 1.18 in MoS₂ by engineering sulphur vacancies via MoO₃ hole injection — among the highest reported for 2D TMDCs.",
     reference: "Chemical Engineering Journal, 2021"
   },
   {
     id: "acc-2",
-    text: "Demonstrated ambipolar Seebeck coefficient in MoS2/MoS2–MoO2 graded composites, enabling reversible p/n switching by junction reciprocation.",
+    text: "Demonstrated ambipolar Seebeck coefficient in MoS₂/MoS₂–MoO₂ graded composites, enabling reversible p/n switching by junction reciprocation.",
     reference: "The Journal of Physical Chemistry Letters, 2024"
   },
   {
     id: "acc-3",
-    text: "Decoupled Seebeck coefficient and electrical conductivity trade-off in MoS2 via controlled out-plane lattice dynamics.",
+    text: "Decoupled Seebeck coefficient and electrical conductivity trade-off in few-layer MoS₂ via controlled out-of-plane lattice dynamics.",
     reference: "Applied Physics Letters, 2022"
   },
   {
     id: "acc-4",
-    text: "Developed flexible thermoelectric nanocomposite based on PEDOT:PSS / Cu12+xSb4S13 / MWCNTs achieving >2x power factor improvement over pristine PEDOT:PSS.",
-    reference: "AGH, 2025"
+    text: "Developed flexible thermoelectric nanocomposite based on PEDOT:PSS / Cu₁₂₊ₓSb₄S₁₃ / MWCNTs achieving >2× power factor improvement over pristine PEDOT:PSS.",
+    reference: "Journal of Materials Chemistry C 14, 8152–8167 (2026)"
   },
   {
     id: "acc-5",
-    text: "Modulated Fermi energy in few-layer MoS2 via metal passivation, achieving enhanced near-IR detectivity for photodetectors.",
+    text: "Modulated Fermi energy in few-layer MoS₂ via metal passivation, achieving enhanced near-IR detectivity for photodetectors.",
     reference: "Journal of Materials Chemistry C, 2024"
   },
   {
     id: "acc-6",
-    text: "Demonstrated room-temperature NO2 gas sensing (ppb-level) using vertically grown SnS2 nanosheets and SnS2/SnS 2D heterostructures.",
+    text: "Demonstrated room-temperature NO₂ gas sensing (ppb-level) using vertically grown SnS₂ nanosheets and SnS₂/SnS 2D heterostructures.",
     reference: "Applied Surface Science & Journal of Alloys and Compounds, 2024"
   },
   {
@@ -37,11 +37,11 @@ export const ACCOMPLISHMENTS: Accomplishment[] = [
   },
   {
     id: "acc-8",
-    text: "First report on preparation and optimization of highly stable densified MoS2/polyaniline composites for temperature dependent transport property measurements."
+    text: "First report on preparation and optimization of highly stable densified MoS₂/polyaniline composites for temperature dependent transport property measurements."
   },
   {
     id: "acc-9",
-    text: "Decoupled trade-off thermoelectric relation in MoS2/polyaniline nanocomposites via optimizing potential barrier height <0.1 eV."
+    text: "Decoupled trade-off thermoelectric relation in MoS₂/polyaniline nanocomposites via optimizing potential barrier height <0.1 eV."
   },
   {
     id: "acc-10",
@@ -49,12 +49,12 @@ export const ACCOMPLISHMENTS: Accomplishment[] = [
   },
   {
     id: "acc-11",
-    text: "Prepared ultrathin layered nanosheets of MoS2 with optimized thickness of 15-20 nm for high performance photocatalytic applications."
+    text: "Prepared ultrathin layered nanosheets of MoS₂ with optimized thickness of 15–20 nm for high performance photocatalytic applications."
   }
 ];
 
 export const INSTRUMENTS: Instrument[] = [
-  { id: "ins-1", category: "Synthesis", name: "CVD (2-zone & 3-zone)", details: "Growth of 2D TMDCs (MoS2, WS2, MoS2-MoOx, SnS2, 2D heterostructures) — monolayer to bulk, lateral & vertical.", image: "/images/instruments/cvd.png" },
+  { id: "ins-1", category: "Synthesis", name: "CVD (2-zone & 3-zone)", details: "Growth of 2D TMDCs (MoS₂, WS₂, MoS₂-MoOₓ, SnS₂, 2D heterostructures) — monolayer to bulk, lateral & vertical.", image: "/images/instruments/cvd.png" },
   { id: "ins-2", category: "Synthesis", name: "Hydrothermal & Solution-processed", details: "Synthesis of organic–inorganic & inorganic–inorganic nanocomposites.", image: "/images/instruments/hydrothermal.png" },
   { id: "ins-3", category: "Synthesis", name: "Arc Melting & Ball Milling", details: "Planetary ball milling & alloy fabrication.", image: "/images/instruments/ball_milling.png" },
   { id: "ins-4", category: "Synthesis", name: "Spark-Plasma Sintering (SPS) & Hot Press", details: "Densification and sintering of bulk thermoelectric materials.", image: "/images/instruments/sps.png" },

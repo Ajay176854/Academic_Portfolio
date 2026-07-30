@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, GraduationCap, MapPin, Award, BookOpen, ExternalLink, Calendar } from 'lucide-react';
+import { Mail, GraduationCap, MapPin, Award, BookOpen, ExternalLink, Calendar, Download } from 'lucide-react';
 import { PROFILE } from '../../data';
 import { MetricsShowcase } from './Metrics';
 import { NavSectionId } from '../../types';
@@ -10,7 +10,7 @@ interface HeroProps {
 
 export function Hero({ updateActiveNav }: HeroProps) {
   return (
-    <section id="about" className="relative pt-32 pb-20 md:pt-40 md:pb-24 bg-gradient-to-b from-[#3B82F6]/5 via-transparent to-transparent scroll-mt-24 md:scroll-mt-28">
+    <section id="about" className="relative pt-24 pb-16 md:pt-28 md:pb-20 bg-gradient-to-b from-[#3B82F6]/5 via-transparent to-transparent scroll-mt-20 md:scroll-mt-24">
       
       {/* Subtle Blue & Thermal Red Ambient Glows */}
       <div className="absolute top-1/4 left-1/12 w-96 h-96 bg-[#3B82F6]/10 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -78,6 +78,17 @@ export function Hero({ updateActiveNav }: HeroProps) {
               >
                 <span>Publications Catalog</span>
               </a>
+
+              {/* Download CV Button (C-09) */}
+              <a
+                href="/Abinaya_Rengarajan_CV.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 bg-white border border-[#3B82F6]/30 text-[#1E3A8A] hover:bg-blue-50/50 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer shadow-2xs"
+                id="hero-btn-download-cv"
+              >
+                <Download size={14} />
+                <span>Download CV (PDF)</span>
+              </a>
             </motion.div>
           </div>
 
@@ -86,15 +97,15 @@ export function Hero({ updateActiveNav }: HeroProps) {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-4 bg-white/95 backdrop-blur-md p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-6 group"
+            className="lg:col-span-4 bg-white/95 backdrop-blur-md p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-6 group lg:-mt-3"
             id="hero-affiliation-sidebar"
           >
             {/* Dr. Abinaya Rengarajan Profile Photo */}
-            <div className="overflow-hidden rounded-2xl border border-slate-100 shadow-2xs">
+            <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-50/50 p-1 shadow-2xs">
               <img
                 src="/Abinaya.jpeg"
                 alt="Dr. Abinaya Rengarajan"
-                className="w-full h-64 md:h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-auto max-h-80 object-contain rounded-xl"
               />
             </div>
 
@@ -104,19 +115,22 @@ export function Hero({ updateActiveNav }: HeroProps) {
               </h3>
               <div className="flex gap-3 items-start">
                 <img 
-                  src="/images/logos/agh.png" 
-                  alt="AGH University Logo" 
-                  className="h-10 w-10 object-contain bg-white p-1 rounded-lg border border-slate-200 shadow-2xs mt-0.5 shrink-0"
+                  src="/images/logos/agh.svg" 
+                  alt="AGH University of Kraków logo" 
+                  className="h-10 sm:h-12 w-auto max-w-[150px] object-contain bg-white p-1 rounded-lg border border-slate-200 shadow-2xs mt-0.5 shrink-0"
                 />
                 <div className="space-y-0.5">
                   <p className="text-xs font-bold text-[#0F172A]">
-                    AGH University of Krakow, Poland
+                    AGH University of Kraków, Poland
+                  </p>
+                  <p className="text-[10px] text-[#475569] font-medium leading-relaxed">
+                    Thermoelectric Research Laboratory, Dept. of Inorganic Chemistry, Faculty of Materials Science and Ceramics
                   </p>
                   <p className="text-[11px] text-[#475569] font-medium leading-relaxed">
-                    Post-Doctoral Fellow (Thermoelectrics) <br />
-                    Supervisor: Prof. Krzysztof Wojciechowski
+                    Research Assistant Professor / Post-Doctoral Fellow — Thermoelectrics <br />
+                    Supervisor: Prof. Krzysztof T. Wojciechowski
                   </p>
-                  <span className="inline-block text-[10px] font-mono font-bold bg-blue-50 text-[#1E3A8A] border border-blue-100 px-2.5 py-0.5 rounded mt-1.5">
+                  <span className="inline-block text-[11px] font-sans font-bold bg-blue-50 text-[#1E3A8A] border border-blue-100 px-2.5 py-0.5 rounded mt-1.5">
                     May 2024 – Present
                   </span>
                 </div>
@@ -126,7 +140,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
             <hr className="border-slate-100" />
 
             <div>
-              <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#1E3A8A] mb-3">
+              <h3 className="text-xs font-sans font-bold uppercase tracking-wider text-[#1E3A8A] mb-3">
                 PRIOR RESEARCH AFFILIATION
               </h3>
               <div className="flex gap-3 items-start">
@@ -137,13 +151,13 @@ export function Hero({ updateActiveNav }: HeroProps) {
                 />
                 <div className="space-y-0.5">
                   <p className="text-xs font-bold text-[#0F172A]">
-                    SRM Institute of Science & Tech, India
+                    SRM Institute of Science and Technology, Chennai, India
                   </p>
                   <p className="text-[11px] text-[#475569] font-medium leading-relaxed">
                     Post-Doctoral Fellow <br />
                     Supervisor: Prof. S. Ponnusamy
                   </p>
-                  <span className="inline-block text-[10px] font-mono font-bold bg-red-50 text-[#EF4444] border border-red-100 px-2.5 py-0.5 rounded mt-1.5">
+                  <span className="inline-block text-[11px] font-sans font-bold bg-red-50 text-[#EF4444] border border-red-100 px-2.5 py-0.5 rounded mt-1.5">
                     Nov 2021 – Mar 2024
                   </span>
                 </div>
@@ -156,7 +170,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
         {/* Metrics Bar */}
         <div className="mt-12">
           <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#1E3A8A] border-b border-slate-200 pb-2 mb-4">
-            Consolidated Research Impact metrics
+            Consolidated Research Impact Metrics
           </h3>
           <MetricsShowcase />
         </div>

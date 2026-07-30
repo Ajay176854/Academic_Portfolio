@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { PUBLICATIONS, MANUSCRIPTS, DOMAIN_COVERAGE } from '../../data';
-import { Search, FileText, ExternalLink, Filter, HelpCircle, GraduationCap, Compass, HelpCircle as HelpIcon } from 'lucide-react';
+import { Search, FileText, ExternalLink, Filter, HelpCircle, GraduationCap, Compass, Info } from 'lucide-react';
 
 export function PublicationsList() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -106,6 +106,14 @@ export function PublicationsList() {
             <span className="opacity-80">Author in bold represents Dr. Abinaya Rengarajan</span>
           </div>
 
+          {/* Author name variants note */}
+          <div className="flex items-start gap-2 bg-blue-50/60 border border-[#3B82F6]/15 rounded-lg px-4 py-2.5">
+            <Info size={14} className="text-[#3B82F6] shrink-0 mt-0.5" />
+            <p className="text-[11px] text-[#334155] leading-relaxed">
+              <strong>Note:</strong> Dr. Rengarajan appears in publications as "R Abinaya", "Abinaya Rengarajan", or "A Rengarajan" depending on each journal's convention and her affiliation at the time. All forms refer to the same author.
+            </p>
+          </div>
+
           {/* Publications List */}
           <div className="space-y-4">
             <AnimatePresence mode="popLayout">
@@ -145,10 +153,25 @@ export function PublicationsList() {
                   </p>
 
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-[#3B82F6]/10 pl-2">
-                    <span className="text-xs md:text-sm text-[#3B82F6] font-semibold italic flex items-center gap-1.5">
-                      <FileText size={14} className="opacity-70" />
-                      {pub.venue}
-                    </span>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-xs md:text-sm text-[#3B82F6] font-semibold italic flex items-center gap-1.5">
+                        <FileText size={14} className="opacity-70" />
+                        {pub.venue}
+                        {pub.volume && <span className="not-italic font-bold text-[#0F172A]"> {pub.volume}</span>}
+                        {pub.pages && <span className="not-italic text-[#475569]">, {pub.pages}</span>}
+                        <span className="not-italic text-[#475569]"> ({pub.year})</span>
+                      </span>
+                      {pub.doi && (
+                        <a
+                          href={`https://doi.org/${pub.doi}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] font-mono text-[#475569] hover:text-[#3B82F6] transition-colors truncate max-w-xs"
+                        >
+                          DOI: {pub.doi}
+                        </a>
+                      )}
+                    </div>
                     {pub.link && (
                       <a
                         href={pub.link}
@@ -205,7 +228,7 @@ export function PublicationsList() {
                 ))}
               </p>
               <div className="text-xs font-mono font-bold text-[#1E3A8A] italic bg-blue-50 px-3 py-1.5 rounded inline-block border border-[#3B82F6]/15">
-                Target: {ms.note}
+                Status: {ms.note}
               </div>
             </div>
           ))}

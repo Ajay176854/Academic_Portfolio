@@ -1,4 +1,4 @@
-export type NavSectionId = 'about' | 'breakthroughs' | 'publications' | 'grants' | 'timeline' | 'awards-services' | 'contact';
+export type NavSectionId = 'about' | 'breakthroughs' | 'publications' | 'grants' | 'timeline' | 'awards-services' | 'gallery' | 'contact';
 
 export interface Publication {
   id: string;
@@ -6,6 +6,9 @@ export interface Publication {
   authors: string[];
   venue: string;
   year: number;
+  volume?: string;
+  pages?: string;
+  doi?: string;
   link?: string;
 }
 
@@ -43,6 +46,7 @@ export interface Grant {
   agency: string;
   amount: string;
   status: 'Ongoing' | 'Completed';
+  role?: string;
 }
 
 export interface Accomplishment {
@@ -66,6 +70,7 @@ export interface Student {
   institution: string;
   period: string;
   publicationsNote?: string;
+  currentPosition?: string;
 }
 
 export interface ProfileData {

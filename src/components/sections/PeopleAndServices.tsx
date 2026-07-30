@@ -14,7 +14,7 @@ export function PeopleAndServices() {
           </h3>
         </div>
         <p className="text-sm text-[#475569] font-medium leading-relaxed max-w-2xl">
-          Actively co-supervised multiple Ph.D. scholars at SRM Institute of Science and Technology (2021–2024) 
+          Co-supervised four Ph.D. scholars at SRM Institute of Science and Technology (2021–2024) 
           focusing on thermoelectric nanomaterial syntheses, generating high-impact co-authored publications.
         </p>
 
@@ -34,6 +34,12 @@ export function PeopleAndServices() {
               <p className="text-xs text-[#3B82F6] font-bold uppercase tracking-wider mb-2">
                 {student.degree} Candidate • {student.institution}
               </p>
+              {student.currentPosition && (
+                <div className="text-xs font-semibold text-[#0F172A] bg-blue-50/80 border border-blue-100 rounded-md px-2.5 py-1 mb-2">
+                  <span className="text-[10px] font-mono uppercase text-[#3B82F6] font-bold block">Current Position</span>
+                  {student.currentPosition}
+                </div>
+              )}
               {student.publicationsNote && (
                 <p className="text-xs text-[#334155] italic leading-relaxed border-t border-[#3B82F6]/10 pt-2 font-medium">
                   Publications: {student.publicationsNote}
@@ -50,7 +56,7 @@ export function PeopleAndServices() {
           <div className="flex items-center gap-2 border-b border-[#3B82F6]/20 pb-2">
             <Award className="text-[#3B82F6]" size={20} />
             <h3 className="text-lg font-bold text-[#0F172A]">
-              Professional Services & memberships
+              Professional Services & Memberships
             </h3>
           </div>
           <div className="space-y-3">
@@ -106,7 +112,7 @@ export function PeopleAndServices() {
         <div className="flex items-center gap-2 border-b border-[#3B82F6]/20 pb-2">
           <BookOpen className="text-[#3B82F6]" size={20} />
           <h3 className="text-lg font-bold text-[#0F172A]">
-            Workshops, courses & Presentations
+            Workshops, Courses & Presentations
           </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

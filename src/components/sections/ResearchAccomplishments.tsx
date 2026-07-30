@@ -62,18 +62,18 @@ export function ResearchAccomplishments() {
                   key={acc.id}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-white p-5 rounded-xl border border-[#3B82F6]/15 hover:border-[#EF4444]/40 hover:shadow-[0_2px_12px_rgba(239,68,68,0.15)] transition-all duration-200 flex gap-4 items-start group"
+                  transition={{ duration: 0.3, delay: index * 0.04 }}
+                  className="bg-white p-5 rounded-xl border border-[#3B82F6]/15 hover:border-[#EF4444]/40 hover:shadow-[0_2px_12px_rgba(239,68,68,0.12)] transition-all duration-200 flex gap-4 items-start group"
                 >
-                  <div className="p-1.5 rounded-lg bg-[#3B82F6]/10 text-[#1E3A8A] group-hover:bg-[#EF4444]/10 group-hover:text-[#EF4444] shrink-0 mt-0.5 transition-colors">
-                    <ShieldCheck size={16} />
+                  <div className="w-7 h-7 rounded-lg bg-[#3B82F6]/10 text-[#1E3A8A] font-sans font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#EF4444]/10 group-hover:text-[#EF4444] transition-colors">
+                    {index + 1}
                   </div>
-                  <div className="space-y-1">
+                  <div className="space-y-2 flex-1">
                     <p className="text-sm text-[#0F172A] font-medium leading-relaxed">
                       {acc.text}
                     </p>
                     {acc.reference && (
-                      <span className="inline-block text-xs font-mono font-bold bg-blue-50 text-[#1E3A8A] px-2 py-0.5 rounded border border-[#3B82F6]/15">
+                      <span className="inline-block text-xs font-sans font-semibold bg-blue-50 text-[#1E3A8A] px-2.5 py-0.5 rounded border border-[#3B82F6]/15 shadow-2xs">
                         {acc.reference}
                       </span>
                     )}
@@ -139,7 +139,7 @@ export function ResearchAccomplishments() {
                       <img 
                         src={ins.image} 
                         alt={ins.name} 
-                        className="w-full h-44 object-contain p-1 group-hover:scale-105 transition-transform duration-300" 
+                        className="w-full h-44 object-contain p-1" 
                       />
                     </div>
                   )}

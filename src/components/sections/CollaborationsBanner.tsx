@@ -2,14 +2,13 @@ import { motion } from 'motion/react';
 
 const INTERNATIONAL = [
   { name: 'University of Cambridge (Cavendish Lab)', logo: '/images/collaborators/cambridge.png', url: 'https://www.phy.cam.ac.uk/' },
-  { name: 'AGH University of Krakow', logo: '/images/collaborators/agh.png', url: 'https://www.agh.edu.pl/en/' },
+  { name: 'AGH University of Kraków', logo: '/images/collaborators/agh.svg', url: 'https://www.agh.edu.pl/en/' },
   { name: 'Shizuoka University', logo: '/images/collaborators/shizuoka.png', url: 'https://www.shizuoka.ac.jp/english/' },
 ];
 
 const NATIONAL = [
-  { name: 'SRM Institute of Science & Tech', logo: '/images/collaborators/srm.png', url: 'https://www.srmist.edu.in/' },
+  { name: 'SRM Institute of Science and Technology', logo: '/images/collaborators/srm.png', url: 'https://www.srmist.edu.in/' },
   { name: 'Bharathidasan University', logo: '/images/collaborators/bharathidasan.png', url: 'https://www.bdu.ac.in/' },
-  { name: 'IISc Bangalore', logo: '/images/collaborators/iisc.png', url: 'https://iisc.ac.in/' },
   { name: 'Kodaikanal Solar Observatory (IIA)', logo: '/images/collaborators/iia.png', url: 'https://www.iiap.res.in/' },
   { name: 'VIT Chennai', logo: '/images/collaborators/vit.png', url: 'https://chennai.vit.ac.in/' },
   { name: 'Periyar University', logo: '/images/collaborators/periyar.png', url: 'https://www.periyaruniversity.ac.in/' },
@@ -22,29 +21,39 @@ const FUNDING_AGENCIES = [
   { name: 'UGC-DAE Consortium for Scientific Research', logo: '/images/funding/ugc-dae.png', url: 'https://www.csr.res.in/' },
 ];
 
-const PUBLISHERS_INDEXING = [
+const HIGH_IMPACT_JOURNALS = [
+  { name: 'Applied Physics Letters (APL)', logo: '/images/publishers/apl.png', url: 'https://pubs.aip.org/aip/apl' },
+  { name: 'Journal of Physical Chemistry Letters (JPCL)', logo: '/images/publishers/jpcl.png', url: 'https://pubs.acs.org/journal/jpclcd' },
+  { name: 'Small (Wiley-VCH)', logo: '/images/publishers/small.png', url: 'https://onlinelibrary.wiley.com/journal/16136829' },
+  { name: 'Chemical Engineering Journal (CEJ)', logo: '/images/publishers/cej.png', url: 'https://www.sciencedirect.com/journal/chemical-engineering-journal' },
   { name: 'American Chemical Society (ACS)', logo: '/images/publishers/acs.png', url: 'https://pubs.acs.org/' },
   { name: 'Royal Society of Chemistry (RSC)', logo: '/images/publishers/rsc.png', url: 'https://pubs.rsc.org/' },
-  { name: 'Wiley Advanced Materials Technologies', logo: '/images/publishers/wiley-advmat.png', url: 'https://onlinelibrary.wiley.com/journal/2365709x' },
-  { name: 'Applied Physics Letters (AIP)', logo: '/images/publishers/apl.png', url: 'https://pubs.aip.org/aip/apl' },
+  { name: 'Wiley Advanced Materials', logo: '/images/publishers/wiley-advmat.png', url: 'https://onlinelibrary.wiley.com/journal/2365709x' },
+];
+
+const ACADEMIC_INDEXES = [
   { name: 'Google Scholar', logo: '/images/publishers/google-scholar.png', url: 'https://scholar.google.com/citations?user=NeBT4L0AAAAJ' },
   { name: 'ORCID iD', logo: '/images/publishers/orcid.png', url: 'https://orcid.org/0000-0002-5199-109X' },
 ];
 
 export function CollaborationsBanner() {
   return (
-    <section className="py-16 bg-white/90 backdrop-blur-md border-y border-[#3B82F6]/15" id="collaborations-showcase">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#1E3A8A] text-white relative overflow-hidden border-y border-[#3B82F6]/20 shadow-xl" id="collaborations-showcase">
+      {/* LinkedIn Cover Style Dynamic Gradient Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/20 via-indigo-900/10 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3B82F6] via-[#2563EB] to-[#EF4444]" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16 relative z-10">
         
         {/* Academic Collaborations Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
-          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#3B82F6]">
-            global & national network
+          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#60A5FA]">
+            global &amp; national network
           </span>
-          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-[#0F172A]">
-            Academic & Research Institutional Collaborations
+          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-white">
+            Academic &amp; Research Institutional Collaborations
           </h2>
-          <p className="text-xs md:text-sm text-[#475569] leading-relaxed">
+          <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
             Collaborative research networks across leading international universities, national institutes of excellence, and government laboratories.
           </p>
         </div>
@@ -52,8 +61,8 @@ export function CollaborationsBanner() {
         {/* International & National Grid */}
         <div className="space-y-12">
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#1E3A8A] mb-6 border-b border-[#3B82F6]/15 pb-3">
-              International & National Partner Universities & Research Institutes
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-300 mb-6 border-b border-blue-500/20 pb-3">
+              International &amp; National Partner Universities &amp; Research Institutes
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               {[...INTERNATIONAL, ...NATIONAL].map((item, idx) => (
@@ -64,17 +73,17 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                 >
-                  <motion.div
-                    whileHover={{ y: -4, scale: 1.04 }}
-                    className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-44 md:w-56 overflow-hidden group cursor-pointer"
-                  >
+                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-44 md:w-56 overflow-hidden group cursor-pointer">
                     <img
                       src={item.logo}
                       alt={item.name}
                       title={item.name}
-                      className="max-h-16 w-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                      className="max-h-14 w-full object-contain p-1"
                     />
-                  </motion.div>
+                    <span className="text-[9px] font-mono font-bold text-[#475569] mt-1 text-center leading-tight line-clamp-1">
+                      {item.name}
+                    </span>
+                  </div>
                 </a>
               ))}
             </div>
@@ -82,8 +91,8 @@ export function CollaborationsBanner() {
 
           {/* Research Funding Sponsors */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#3B82F6] mb-6 border-b border-[#3B82F6]/15 pb-3">
-              Government Research Grant & Funding Bodies
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-emerald-300 mb-6 border-b border-emerald-500/20 pb-3">
+              Government Research Grant &amp; Funding Bodies
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-5xl mx-auto">
               {FUNDING_AGENCIES.map((agency, idx) => (
@@ -94,29 +103,26 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={agency.name}
                 >
-                  <motion.div
-                    whileHover={{ y: -4, scale: 1.04 }}
-                    className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-52 md:w-60 group cursor-pointer"
-                  >
+                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-52 md:w-60 group cursor-pointer">
                     <img
                       src={agency.logo}
                       alt={agency.name}
                       title={agency.name}
-                      className="max-h-16 w-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                      className="max-h-16 w-full object-contain p-1"
                     />
-                  </motion.div>
+                  </div>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* High Impact Publishers & Indexing */}
+          {/* High Impact & Nature Index Publications - Row 1 */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-[#3B82F6] mb-6 border-b border-[#3B82F6]/15 pb-3">
-              High-Impact Publishers & Academic Indexing
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-300 mb-6 border-b border-blue-500/20 pb-3">
+              High-Impact &amp; Nature Index Journal Publications (APL, JPCL, Small, CEJ, ACS, RSC)
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-              {PUBLISHERS_INDEXING.map((pub, idx) => (
+              {HIGH_IMPACT_JOURNALS.map((pub, idx) => (
                 <a
                   key={idx}
                   href={pub.url}
@@ -124,17 +130,47 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={pub.name}
                 >
-                  <motion.div
-                    whileHover={{ y: -4, scale: 1.04 }}
-                    className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex items-center justify-center h-20 w-44 md:w-52 group cursor-pointer"
-                  >
+                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-20 w-44 md:w-52 group cursor-pointer">
                     <img
                       src={pub.logo}
                       alt={pub.name}
                       title={pub.name}
-                      className="max-h-14 w-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                      className="max-h-12 w-full object-contain p-1"
                     />
-                  </motion.div>
+                    <span className="text-[9px] font-mono font-bold text-[#475569] mt-1 text-center leading-tight line-clamp-1">
+                      {pub.name}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Academic Indexing & Profiles - Row 2 */}
+          <div>
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-indigo-300 mb-6 border-b border-indigo-500/20 pb-3">
+              Academic Bibliographic Indexing &amp; Author Identifiers
+            </h3>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+              {ACADEMIC_INDEXES.map((pub, idx) => (
+                <a
+                  key={idx}
+                  href={pub.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={pub.name}
+                >
+                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-20 w-44 md:w-52 group cursor-pointer">
+                    <img
+                      src={pub.logo}
+                      alt={pub.name}
+                      title={pub.name}
+                      className="max-h-12 w-full object-contain p-1"
+                    />
+                    <span className="text-[9px] font-mono font-bold text-[#475569] mt-1 text-center leading-tight line-clamp-1">
+                      {pub.name}
+                    </span>
+                  </div>
                 </a>
               ))}
             </div>

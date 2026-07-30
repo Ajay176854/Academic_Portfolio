@@ -18,8 +18,8 @@ export function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      // Send live email notification to abynayarangrajan@gmail.com & abinaya@agh.edu.pl
-      await fetch("https://formsubmit.co/ajax/abynayarangrajan@gmail.com", {
+      // Send live email notification to abinayarengarajan@gmail.com & abinaya@agh.edu.pl
+      await fetch("https://formsubmit.co/ajax/abinayarengarajan@gmail.com", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -89,24 +89,27 @@ export function ContactSection() {
             </div>
             <div className="space-y-1">
               <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#3B82F6] block">
-                Official & Personal Emails
+                Institutional Email
               </span>
-              <a
-                href={`mailto:${PROFILE.email}`}
-                className="block text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-semibold"
-                id="contact-email-1"
-              >
-                {PROFILE.email}
-              </a>
               {PROFILE.email2 && (
                 <a
                   href={`mailto:${PROFILE.email2}`}
                   className="block text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-semibold"
-                  id="contact-email-2"
+                  id="contact-email-institutional"
                 >
                   {PROFILE.email2}
                 </a>
               )}
+              <span className="text-[10px] uppercase font-mono font-bold tracking-wider text-[#475569] block mt-2">
+                Alternative Email
+              </span>
+              <a
+                href={`mailto:${PROFILE.email}`}
+                className="block text-xs md:text-sm text-[#0F172A] hover:text-[#3B82F6] transition-colors font-semibold"
+                id="contact-email-personal"
+              >
+                {PROFILE.email}
+              </a>
             </div>
           </div>
 

@@ -9,7 +9,7 @@ import { PeopleAndServices } from '../components/sections/PeopleAndServices';
 import { ContactSection } from '../components/sections/ContactSection';
 import { ReferencesSection } from '../components/sections/ReferencesSection';
 import { EDUCATION, EXPERIENCE, AWARDS } from '../data';
-import { GraduationCap, Briefcase, Award as TrophyIcon, Mail } from 'lucide-react';
+import { GraduationCap, Briefcase, Award as TrophyIcon, Mail, Image } from 'lucide-react';
 import { NavSectionId } from '../types';
 
 interface HomePageProps {
@@ -26,6 +26,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
     { id: 'grants', label: 'Grants & Funding', icon: TrophyIcon },
     { id: 'timeline', label: 'Academic Timeline', icon: Briefcase },
     { id: 'awards-services', label: 'Honors & Services', icon: TrophyIcon },
+    { id: 'gallery', label: 'Photo Gallery', icon: Image },
     { id: 'contact', label: 'Collaboration & Contact', icon: Mail },
   ];
 
@@ -46,7 +47,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
               Academic & Scientific Dossier
             </h2>
             <p className="text-xs md:text-sm text-[#475569] leading-relaxed">
-              Explore Dr. Abinaya's research findings, peer-reviewed bibliography, 
+              Explore Dr. Rengarajan's research findings, peer-reviewed bibliography, 
               funding acquisitions, and academic milestones using the panels below.
             </p>
           </div>
@@ -104,7 +105,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                           <div key={exp.id} className="relative group flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                             <div className="flex-1">
                               <div className="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-[#3B82F6] border-2 border-[#F8FAFC] group-hover:bg-[#EF4444] transition-colors"></div>
-                              <span className="text-[10px] font-mono font-bold tracking-wider uppercase text-[#1E3A8A] bg-[#3B82F6]/10 px-2.5 py-1 rounded">
+                               <span className="text-[11px] font-sans font-bold tracking-wide uppercase text-[#1E3A8A] bg-[#3B82F6]/10 px-2.5 py-1 rounded">
                                 {exp.period}
                               </span>
                               <h4 className="font-extrabold text-[#0F172A] text-base mt-2.5 leading-snug">
@@ -122,7 +123,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img 
                                   src={exp.logo} 
                                   alt={`${exp.institution} Logo`} 
-                                  className="h-10 sm:h-12 max-w-[140px] sm:max-w-[160px] object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs transition-transform duration-300 group-hover:scale-105 group-hover:border-[#3B82F6]/40"
+                                  className="h-10 sm:h-12 max-w-[140px] sm:max-w-[160px] object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
                                   referrerPolicy="no-referrer"
                                 />
                               </div>
@@ -143,7 +144,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                           <div key={edu.id} className="relative group flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                             <div className="flex-1">
                               <div className="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-[#3B82F6] border-2 border-[#F8FAFC] group-hover:bg-[#EF4444] transition-colors"></div>
-                              <span className="text-[10px] font-mono font-bold tracking-wider uppercase text-[#1E3A8A] bg-[#3B82F6]/10 px-2.5 py-1 rounded">
+                              <span className="text-[11px] font-sans font-bold tracking-wide uppercase text-[#1E3A8A] bg-[#3B82F6]/10 px-2.5 py-1 rounded">
                                 {edu.year}
                               </span>
                               <h4 className="font-extrabold text-[#0F172A] text-base mt-2.5 leading-snug">
@@ -161,7 +162,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img 
                                   src={edu.logo} 
                                   alt={`${edu.institution} Logo`} 
-                                  className="h-10 sm:h-12 max-w-[140px] sm:max-w-[160px] object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs transition-transform duration-300 group-hover:scale-105 group-hover:border-[#3B82F6]/40"
+                                  className="h-10 sm:h-12 max-w-[140px] sm:max-w-[160px] object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
                                   referrerPolicy="no-referrer"
                                 />
                               </div>
@@ -195,7 +196,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img
                                   src={awd.logo}
                                   alt={awd.organization}
-                                  className="h-10 sm:h-11 max-w-[130px] object-contain bg-white p-1 rounded-md border border-[#3B82F6]/15 shadow-2xs group-hover:scale-105 transition-transform"
+                                  className="h-14 sm:h-16 max-w-[160px] object-contain bg-white p-1.5 rounded-md border border-[#3B82F6]/15 shadow-2xs"
                                   referrerPolicy="no-referrer"
                                 />
                               )}
@@ -209,8 +210,8 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                             </div>
 
                             <div className="mt-3 pt-2 border-t border-[#3B82F6]/10">
-                              <span className="inline-block text-[9px] font-mono font-bold bg-blue-50 text-[#1E3A8A] px-2 py-0.5 rounded">
-                                Year {awd.year}
+                              <span className="inline-block text-[11px] font-sans font-bold bg-blue-50 text-[#1E3A8A] px-2.5 py-0.5 rounded">
+                                {awd.year}
                               </span>
                             </div>
                           </div>
@@ -220,6 +221,23 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
 
                     {/* Mentorship & Professional Services */}
                     <PeopleAndServices />
+                  </div>
+                )}
+
+                {activeTab === 'gallery' && (
+                  <div className="bg-white p-10 md:p-16 rounded-2xl border border-[#3B82F6]/20 shadow-2xs text-center space-y-6">
+                    <div className="w-16 h-16 bg-[#3B82F6]/10 text-[#1E3A8A] rounded-2xl flex items-center justify-center mx-auto">
+                      <Image size={32} />
+                    </div>
+                    <div className="max-w-md mx-auto space-y-2">
+                      <h3 className="text-xl font-serif font-extrabold text-[#0F172A]">Research & Event Gallery</h3>
+                      <p className="text-xs md:text-sm text-[#475569] leading-relaxed">
+                        Photos from international conferences, laboratory research experiments, award ceremonies, and academic visits will be showcased here shortly.
+                      </p>
+                    </div>
+                    <span className="inline-block text-xs font-mono font-bold bg-blue-50 text-[#1E3A8A] border border-[#3B82F6]/20 px-4 py-1.5 rounded-full">
+                      Photos Coming Soon
+                    </span>
                   </div>
                 )}
 

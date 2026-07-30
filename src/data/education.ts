@@ -14,7 +14,7 @@ export const EDUCATION: Education[] = [
     degree: "Ph.D. in Physics",
     institution: "SRM Institute of Science and Technology, Chennai, India",
     year: "Nov 2022",
-    details: "Supervisor: Dr. J. Archana. Thesis: Interface-engineering of layered MoS2 nanostructures for thermoelectric applications.",
+    details: "Supervisor: Dr. J. Archana. Thesis: Interface-engineering of layered MoS₂ nanostructures for thermoelectric applications.",
     logo: "/images/logos/srm.png"
   },
   {

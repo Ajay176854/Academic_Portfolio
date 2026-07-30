@@ -10,6 +10,7 @@ const NAV_LINKS: { name: string; href: string; id: NavSectionId }[] = [
   { name: 'Publications', href: '#publications', id: 'publications' },
   { name: 'Grants & Funding', href: '#grants', id: 'grants' },
   { name: 'Mentorship & Services', href: '#services', id: 'awards-services' },
+  { name: 'Gallery', href: '#gallery', id: 'gallery' },
   { name: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -55,8 +56,8 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
           <span className="font-serif font-extrabold text-lg md:text-xl tracking-tight text-[#1E3A8A] group-hover:text-[#3B82F6] transition-colors leading-tight">
             {PROFILE.name}
           </span>
-          <span className="text-[8px] sm:text-[9px] md:text-[10px] font-mono font-bold uppercase tracking-wider text-[#1E3A8A] leading-tight mt-0.5 whitespace-nowrap">
-            Ph.D. • Thermoelectrics &amp; <span className="text-[#EF4444]">Optoelectronics</span>
+          <span className="text-[8px] sm:text-[9px] md:text-[10px] font-sans font-bold uppercase tracking-wider text-[#1E3A8A] leading-tight mt-0.5 whitespace-nowrap">
+            PH.D. (PHYSICS) • PH.D. (<span className="text-[#EF4444]">OPTOELECTRONICS &amp; NANOSTRUCTURE SCIENCE</span>)
           </span>
         </a>
 
