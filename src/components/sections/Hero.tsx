@@ -117,9 +117,9 @@ export function Hero({ updateActiveNav }: HeroProps) {
               </h3>
               <div className="flex gap-3 items-start">
                 <img 
-                  src="/images/logos/agh.svg" 
-                  alt="AGH University of Kraków logo" 
-                  className="h-10 sm:h-12 w-auto max-w-[150px] object-contain bg-white p-1 rounded-lg border border-slate-200 shadow-2xs mt-0.5 shrink-0"
+                  src="/images/logos/agh-wide.png" 
+                  alt="AGH University Logo" 
+                  className="h-16 sm:h-20 w-auto max-w-[220px] object-contain bg-white p-2 rounded-lg border border-slate-200 shadow-2xs mt-0.5 shrink-0"
                 />
                 <div className="space-y-0.5">
                   <p className="text-xs font-bold text-[#0F172A]">
@@ -129,7 +129,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
                     Thermoelectric Research Laboratory, Dept. of Inorganic Chemistry, Faculty of Materials Science and Ceramics
                   </p>
                   <p className="text-[11px] text-[#475569] font-medium leading-relaxed">
-                    Research Assistant Professor / Post-Doctoral Fellow — Thermoelectrics <br />
+                    Research Assistant Professor — Thermoelectrics <br />
                     Supervisor: Prof. Krzysztof T. Wojciechowski
                   </p>
                   <span className="inline-block text-[11px] font-sans font-bold bg-blue-50 text-[#1E3A8A] border border-blue-100 px-2.5 py-0.5 rounded mt-1.5">
@@ -149,7 +149,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
                 <img 
                   src="/images/logos/srm.png" 
                   alt="SRM Institute Logo" 
-                  className="h-10 w-10 object-contain bg-white p-1 rounded-lg border border-slate-200 shadow-2xs mt-0.5 shrink-0"
+                  className="h-16 sm:h-20 w-auto max-w-[220px] object-contain bg-white p-2 rounded-lg border border-slate-200 shadow-2xs mt-0.5 shrink-0"
                 />
                 <div className="space-y-0.5">
                   <p className="text-xs font-bold text-[#0F172A]">
@@ -159,7 +159,7 @@ export function Hero({ updateActiveNav }: HeroProps) {
                     Post-Doctoral Fellow <br />
                     Supervisor: Prof. S. Ponnusamy
                   </p>
-                  <span className="inline-block text-[11px] font-sans font-bold bg-red-50 text-[#EF4444] border border-red-100 px-2.5 py-0.5 rounded mt-1.5">
+                  <span className="inline-block text-[11px] font-sans font-bold bg-blue-50 text-[#1E3A8A] border border-blue-100 px-2.5 py-0.5 rounded mt-1.5">
                     Nov 2021 – Mar 2024
                   </span>
                 </div>

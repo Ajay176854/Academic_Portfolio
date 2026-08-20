@@ -53,6 +53,7 @@ export interface Accomplishment {
   id: string;
   text: string;
   reference?: string;
+  link?: string;
 }
 
 export interface Instrument {

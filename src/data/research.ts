@@ -4,52 +4,68 @@ export const ACCOMPLISHMENTS: Accomplishment[] = [
   {
     id: "acc-1",
     text: "Achieved record thermoelectric figure-of-merit zT = 1.18 in MoS₂ by engineering sulphur vacancies via MoO₃ hole injection — among the highest reported for 2D TMDCs.",
-    reference: "Chemical Engineering Journal, 2021"
+    reference: "Chemical Engineering Journal, 2021",
+    link: "https://doi.org/10.1016/j.cej.2021.128484"
   },
   {
     id: "acc-2",
     text: "Demonstrated ambipolar Seebeck coefficient in MoS₂/MoS₂–MoO₂ graded composites, enabling reversible p/n switching by junction reciprocation.",
-    reference: "The Journal of Physical Chemistry Letters, 2024"
+    reference: "The Journal of Physical Chemistry Letters, 2024",
+    link: "https://doi.org/10.1021/acs.jpclett.4c02683"
   },
   {
     id: "acc-3",
     text: "Decoupled Seebeck coefficient and electrical conductivity trade-off in few-layer MoS₂ via controlled out-of-plane lattice dynamics.",
-    reference: "Applied Physics Letters, 2022"
+    reference: "Applied Physics Letters, 2022",
+    link: "https://doi.org/10.1063/5.0084478"
   },
   {
     id: "acc-4",
     text: "Developed flexible thermoelectric nanocomposite based on PEDOT:PSS / Cu₁₂₊ₓSb₄S₁₃ / MWCNTs achieving >2× power factor improvement over pristine PEDOT:PSS.",
-    reference: "Journal of Materials Chemistry C 14, 8152–8167 (2026)"
+    reference: "Journal of Materials Chemistry C 14, 8152–8167 (2026)",
+    link: "https://doi.org/10.1039/D5TC04463D"
   },
   {
     id: "acc-5",
     text: "Modulated Fermi energy in few-layer MoS₂ via metal passivation, achieving enhanced near-IR detectivity for photodetectors.",
-    reference: "Journal of Materials Chemistry C, 2024"
+    reference: "Journal of Materials Chemistry C, 2024",
+    link: "https://doi.org/10.1039/D3TC04603G"
   },
   {
     id: "acc-6",
     text: "Demonstrated room-temperature NO₂ gas sensing (ppb-level) using vertically grown SnS₂ nanosheets and SnS₂/SnS 2D heterostructures.",
-    reference: "Applied Surface Science & Journal of Alloys and Compounds, 2024"
+    reference: "Applied Surface Science & Journal of Alloys and Compounds, 2024",
+    link: "https://doi.org/10.1016/j.jallcom.2024.175002"
   },
   {
     id: "acc-7",
-    text: "Constructed a bespoke high-temperature Seebeck coefficient (2-probe) and electrical resistivity (4-probe linear) measurement system calibrated to >99% accuracy with constantan standard."
+    text: "Constructed a bespoke high-temperature Seebeck coefficient (2-probe) and electrical resistivity (4-probe linear) measurement system calibrated to >99% accuracy with constantan standard.",
+    reference: "Chemical Engineering Journal, 2021",
+    link: "https://doi.org/10.1016/j.cej.2021.128484"
   },
   {
     id: "acc-8",
-    text: "First report on preparation and optimization of highly stable densified MoS₂/polyaniline composites for temperature dependent transport property measurements."
+    text: "First report on preparation and optimization of highly stable densified MoS₂/polyaniline composites for temperature dependent transport property measurements.",
+    reference: "Journal of Colloid and Interface Science, 2021",
+    link: "https://doi.org/10.1016/j.jcis.2020.09.096"
   },
   {
     id: "acc-9",
-    text: "Decoupled trade-off thermoelectric relation in MoS₂/polyaniline nanocomposites via optimizing potential barrier height <0.1 eV."
+    text: "Decoupled trade-off thermoelectric relation in MoS₂/polyaniline nanocomposites via optimizing potential barrier height <0.1 eV.",
+    reference: "Journal of Colloid and Interface Science, 2021",
+    link: "https://doi.org/10.1016/j.jcis.2020.09.096"
   },
   {
     id: "acc-10",
-    text: "Track record on optimization of active sites in nanostructures towards high performance photoelectrode, gas sensing, and photocatalytic applications via defects, surface, and nanoarchitectures engineering."
+    text: "Track record on optimization of active sites in nanostructures towards high performance photoelectrode, gas sensing, and photocatalytic applications via defects, surface, and nanoarchitectures engineering.",
+    reference: "Small, 2025",
+    link: "https://doi.org/10.1002/smll.202504996"
   },
   {
     id: "acc-11",
-    text: "Prepared ultrathin layered nanosheets of MoS₂ with optimized thickness of 15–20 nm for high performance photocatalytic applications."
+    text: "Prepared ultrathin layered nanosheets of MoS₂ with optimized thickness of 15–20 nm for high performance photocatalytic applications.",
+    reference: "RSC Advances, 2018",
+    link: "https://doi.org/10.1039/C8RA04627A"
   }
 ];
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ACCOMPLISHMENTS, INSTRUMENTS } from '../../data';
-import { Award, Compass, Wrench, Layers, Cpu, Radio, ShieldCheck } from 'lucide-react';
+import { Award, Compass, Wrench, Layers, Cpu, Radio, ShieldCheck, ExternalLink } from 'lucide-react';
 
 export function ResearchAccomplishments() {
   const [activeSubTab, setActiveSubTab] = useState<'breakthroughs' | 'instruments'>('breakthroughs');
@@ -73,9 +73,21 @@ export function ResearchAccomplishments() {
                       {acc.text}
                     </p>
                     {acc.reference && (
-                      <span className="inline-block text-xs font-sans font-semibold bg-blue-50 text-[#1E3A8A] px-2.5 py-0.5 rounded border border-[#3B82F6]/15 shadow-2xs">
-                        {acc.reference}
-                      </span>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-2">
+                        <span className="inline-block text-xs font-sans font-semibold bg-blue-50 text-[#1E3A8A] px-2.5 py-0.5 rounded border border-[#3B82F6]/15 shadow-2xs w-fit">
+                          {acc.reference}
+                        </span>
+                        {acc.link && (
+                          <a
+                            href={acc.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[10px] font-bold text-[#1E3A8A] hover:text-[#EF4444] transition-colors uppercase tracking-widest bg-[#3B82F6]/10 hover:bg-[#EF4444]/10 px-2.5 py-1.5 rounded-md cursor-pointer shrink-0"
+                          >
+                            View Publisher <ExternalLink size={12} className="-mt-0.5" />
+                          </a>
+                        )}
+                      </div>
                     )}
                   </div>
                 </motion.div>

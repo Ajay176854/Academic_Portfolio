@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 const INTERNATIONAL = [
   { name: 'University of Cambridge (Cavendish Lab)', logo: '/images/collaborators/cambridge.png', url: 'https://www.phy.cam.ac.uk/' },
-  { name: 'AGH University of Kraków', logo: '/images/collaborators/agh.svg', url: 'https://www.agh.edu.pl/en/' },
+  { name: 'AGH University of Kraków', logo: '/images/collaborators/agh-wide.png', url: 'https://www.agh.edu.pl/en/' },
   { name: 'Shizuoka University', logo: '/images/collaborators/shizuoka.png', url: 'https://www.shizuoka.ac.jp/english/' },
 ];
 
@@ -38,22 +38,22 @@ const ACADEMIC_INDEXES = [
 
 export function CollaborationsBanner() {
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-900 via-[#0F172A] to-[#1E3A8A] text-white relative overflow-hidden border-y border-[#3B82F6]/20 shadow-xl" id="collaborations-showcase">
-      {/* LinkedIn Cover Style Dynamic Gradient Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/20 via-indigo-900/10 to-transparent pointer-events-none" />
+    <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-900 relative overflow-hidden border-y border-[#3B82F6]/20 shadow-sm" id="collaborations-showcase">
+      {/* Dynamic Gradient Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/5 via-indigo-900/5 to-transparent pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3B82F6] via-[#2563EB] to-[#EF4444]" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16 relative z-10">
         
         {/* Academic Collaborations Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
-          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#60A5FA]">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-blue-600">
             global &amp; national network
           </span>
-          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-white">
+          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-slate-900">
             Academic &amp; Research Institutional Collaborations
           </h2>
-          <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+          <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
             Collaborative research networks across leading international universities, national institutes of excellence, and government laboratories.
           </p>
         </div>
@@ -61,7 +61,7 @@ export function CollaborationsBanner() {
         {/* International & National Grid */}
         <div className="space-y-12">
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-300 mb-6 border-b border-blue-500/20 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-700 mb-6 border-b border-blue-500/20 pb-3">
               International &amp; National Partner Universities &amp; Research Institutes
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
@@ -73,14 +73,14 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                 >
-                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-44 md:w-56 overflow-hidden group cursor-pointer">
+                  <div className="transition-transform hover:scale-105 flex flex-col items-center justify-center p-2 group cursor-pointer">
                     <img
                       src={item.logo}
                       alt={item.name}
                       title={item.name}
-                      className="max-h-14 w-full object-contain p-1"
+                      className="max-h-16 sm:max-h-20 w-full object-contain p-1 mix-blend-multiply"
                     />
-                    <span className="text-[9px] font-mono font-bold text-[#475569] mt-1 text-center leading-tight line-clamp-1">
+                    <span className="text-[9px] font-mono font-bold text-slate-700 mt-1 text-center leading-tight line-clamp-1">
                       {item.name}
                     </span>
                   </div>
@@ -91,7 +91,7 @@ export function CollaborationsBanner() {
 
           {/* Research Funding Sponsors */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-emerald-300 mb-6 border-b border-emerald-500/20 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 mb-6 border-b border-emerald-500/20 pb-3">
               Government Research Grant &amp; Funding Bodies
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 max-w-5xl mx-auto">
@@ -103,12 +103,12 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={agency.name}
                 >
-                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-24 w-52 md:w-60 group cursor-pointer">
+                  <div className="transition-transform hover:scale-105 flex flex-col items-center justify-center p-2 group cursor-pointer">
                     <img
                       src={agency.logo}
                       alt={agency.name}
                       title={agency.name}
-                      className="max-h-16 w-full object-contain p-1"
+                      className="max-h-20 sm:max-h-24 w-full object-contain p-1 mix-blend-multiply"
                     />
                   </div>
                 </a>
@@ -118,7 +118,7 @@ export function CollaborationsBanner() {
 
           {/* High Impact & Nature Index Publications - Row 1 */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-300 mb-6 border-b border-blue-500/20 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-700 mb-6 border-b border-blue-500/20 pb-3">
               High-Impact &amp; Nature Index Journal Publications (APL, JPCL, Small, CEJ, ACS, RSC)
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
@@ -130,14 +130,14 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={pub.name}
                 >
-                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-20 w-44 md:w-52 group cursor-pointer">
+                  <div className="transition-transform hover:scale-105 flex flex-col items-center justify-center p-2 group cursor-pointer">
                     <img
                       src={pub.logo}
                       alt={pub.name}
                       title={pub.name}
-                      className="max-h-12 w-full object-contain p-1"
+                      className="max-h-16 sm:max-h-20 w-full object-contain p-1 mix-blend-multiply"
                     />
-                    <span className="text-[9px] font-mono font-bold text-[#475569] mt-1 text-center leading-tight line-clamp-1">
+                    <span className="text-[9px] font-mono font-bold text-slate-700 mt-1 text-center leading-tight line-clamp-1">
                       {pub.name}
                     </span>
                   </div>
@@ -148,7 +148,7 @@ export function CollaborationsBanner() {
 
           {/* Academic Indexing & Profiles - Row 2 */}
           <div>
-            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-indigo-300 mb-6 border-b border-indigo-500/20 pb-3">
+            <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-indigo-700 mb-6 border-b border-indigo-500/20 pb-3">
               Academic Bibliographic Indexing &amp; Author Identifiers
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
@@ -160,14 +160,14 @@ export function CollaborationsBanner() {
                   rel="noopener noreferrer"
                   aria-label={pub.name}
                 >
-                  <div className="bg-white p-3 rounded-2xl border border-[#3B82F6]/20 shadow-2xs hover:shadow-[0_4px_15px_rgba(239,68,68,0.15)] hover:border-[#EF4444]/40 transition-all flex flex-col items-center justify-center h-20 w-44 md:w-52 group cursor-pointer">
+                  <div className="transition-transform hover:scale-105 flex flex-col items-center justify-center p-2 group cursor-pointer">
                     <img
                       src={pub.logo}
                       alt={pub.name}
                       title={pub.name}
-                      className="max-h-12 w-full object-contain p-1"
+                      className="max-h-16 sm:max-h-20 w-full object-contain p-1 mix-blend-multiply"
                     />
-                    <span className="text-[9px] font-mono font-bold text-[#475569] mt-1 text-center leading-tight line-clamp-1">
+                    <span className="text-[9px] font-mono font-bold text-slate-700 mt-1 text-center leading-tight line-clamp-1">
                       {pub.name}
                     </span>
                   </div>

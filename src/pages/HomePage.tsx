@@ -44,7 +44,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
               scholar portfolio explorer
             </span>
             <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-[#0F172A]">
-              Academic & Scientific Dossier
+              Research & Professional Milestones
             </h2>
             <p className="text-xs md:text-sm text-[#475569] leading-relaxed">
               Explore Dr. Rengarajan's research findings, peer-reviewed bibliography, 
@@ -123,7 +123,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img 
                                   src={exp.logo} 
                                   alt={`${exp.institution} Logo`} 
-                                  className="h-10 sm:h-12 max-w-[140px] sm:max-w-[160px] object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
+                                  className="h-16 sm:h-20 w-auto max-w-[200px] sm:max-w-[240px] object-contain bg-white p-2 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
                                   referrerPolicy="no-referrer"
                                 />
                               </div>
@@ -162,7 +162,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img 
                                   src={edu.logo} 
                                   alt={`${edu.institution} Logo`} 
-                                  className="h-10 sm:h-12 max-w-[140px] sm:max-w-[160px] object-contain bg-white p-1 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
+                                  className="h-16 sm:h-20 w-auto max-w-[200px] sm:max-w-[240px] object-contain bg-white p-2 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
                                   referrerPolicy="no-referrer"
                                 />
                               </div>
@@ -196,7 +196,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img
                                   src={awd.logo}
                                   alt={awd.organization}
-                                  className="h-14 sm:h-16 max-w-[160px] object-contain bg-white p-1.5 rounded-md border border-[#3B82F6]/15 shadow-2xs"
+                                  className="h-16 sm:h-20 w-auto max-w-[240px] object-contain bg-white p-2 rounded-md border border-[#3B82F6]/15 shadow-2xs"
                                   referrerPolicy="no-referrer"
                                 />
                               )}
