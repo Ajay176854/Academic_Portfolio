@@ -63,6 +63,20 @@ export function GrantsList() {
         </div>
       </div>
 
+      {/* Grant Preparation & Leadership Highlight */}
+      <div className="bg-white p-6 md:p-8 rounded-xl border border-[#3B82F6]/20 shadow-2xs relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#3B82F6] to-[#1E3A8A]"></div>
+        <h3 className="text-lg md:text-xl font-bold text-[#0F172A] mb-3 flex items-center gap-2">
+          <Award className="text-[#3B82F6]" size={22} />
+          Project Grant Preparation &amp; Team Leadership
+        </h3>
+        <p className="text-sm md:text-base text-[#475569] leading-relaxed">
+          <strong>Objective &amp; Capacity:</strong> Demonstrates a strong capability in formulating and securing competitive research grants. 
+          Successfully organizes and leads dynamic research teams of 2 to 8 members, providing comprehensive assistance in 
+          end-to-end grant preparation—from initial project conceptualization to final proposal submission.
+        </p>
+      </div>
+
       {/* Filter Segment Buttons */}
       <div className="flex items-center justify-between border-b border-[#3B82F6]/15 pb-4">
         <div className="flex items-center gap-2">

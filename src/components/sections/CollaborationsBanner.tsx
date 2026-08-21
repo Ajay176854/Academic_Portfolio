@@ -34,6 +34,7 @@ const HIGH_IMPACT_JOURNALS = [
 const ACADEMIC_INDEXES = [
   { name: 'Google Scholar', logo: '/images/publishers/google-scholar.png', url: 'https://scholar.google.com/citations?user=NeBT4L0AAAAJ' },
   { name: 'ORCID iD', logo: '/images/publishers/orcid.png', url: 'https://orcid.org/0000-0002-5199-109X' },
+  { name: 'LinkedIn', logo: '/images/publishers/linkedin.png', url: 'https://www.linkedin.com/safety/go/?url=https%3A%2F%2Flnkd%2Ein%2FgY5gUk-9&urlhash=64_8&mt=uPfSoN02OUt0-MB6hCjH_y7fDQTYnRjLiI1Vvlu5eS3yeOLrpFoj-fQR8YXFCbwIYVGPwwSDQd1q1c9xc41mOLaEpdoSNTEZC0sydkZ0nZSMegqdpYkAoa9xgg&isSdui=true' },
 ];
 
 export function CollaborationsBanner() {

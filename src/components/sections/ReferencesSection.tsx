@@ -34,9 +34,9 @@ export function ReferencesSection() {
                   {ref.institution}
                 </p>
               </div>
-              <div className="pt-4 text-[11px] text-[#475569] font-mono font-bold flex items-center gap-1.5">
-                <Mail size={12} className="text-[#3B82F6]" />
-                <span>Contact details available upon request</span>
+              <div className="pt-4 text-[11px] text-[#475569] font-mono font-bold flex items-center gap-1.5 break-all">
+                <Mail size={12} className="text-[#3B82F6] shrink-0" />
+                <a href={`mailto:${ref.email}`} className="hover:text-[#3B82F6] transition-colors">{ref.email}</a>
               </div>
             </div>
           ))}

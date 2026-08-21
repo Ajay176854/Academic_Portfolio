@@ -84,4 +84,5 @@ export interface ProfileData {
   address?: string;
   scholar?: string;
   orcid?: string;
+  linkedin?: string;
 }

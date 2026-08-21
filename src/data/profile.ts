@@ -3,13 +3,14 @@ import { ProfileData } from '../types';
 export const PROFILE: ProfileData = {
   name: "Dr. Abinaya Rengarajan",
   title: "Research Assistant Professor",
-  bio: "Experimentalist specializing in synthesis, fabrication, and characterization of low-dimensional transition metal dichalcogenides (TMDCs) and chalcogenide materials for thermoelectric energy harvesting, photodetectors, gas sensors, and solar cells. Research spans 2D materials (MoS₂, WS₂, SnS₂), flexible devices, and inorganic–organic hybrid nanocomposites. Author of 29 peer-reviewed publications with 589 citations (Google Scholar, July 2026). Expertise directly aligns with thermoelectrics, solar cells, photodetectors, gas sensors, electrocatalysis, and 2D materials.",
+  bio: "Experimentalist specializing in synthesis, fabrication, and characterization of low-dimensional transition metal dichalcogenides (TMDCs) and chalcogenide materials for thermoelectric energy harvesting, photodetectors, gas sensors, and solar cells. Research spans 2D materials (MoS₂, WS₂, SnS₂), flexible devices, and inorganic–organic hybrid nanocomposites. Author of 29 peer-reviewed publications with 589 citations (Google Scholar, August 2026). Expertise directly aligns with thermoelectrics, solar cells, photodetectors, gas sensors, electrocatalysis, and 2D materials.",
   email: "abinayarengarajan@gmail.com",
   email2: "abinaya@agh.edu.pl",
   phone: "+48 729 639 500",
   address: "Thermoelectric Research Lab, Dept. of Inorganic Chemistry, AGH University of Kraków, al. Mickiewicza 30, 30-059 Kraków, Poland",
   scholar: "https://scholar.google.com/citations?user=NeBT4L0AAAAJ",
-  orcid: "https://orcid.org/0000-0002-5199-109X"
+  orcid: "https://orcid.org/0000-0002-5199-109X",
+  linkedin: "https://lnkd.in/gY5gUk-9"
 };
 
 export const METRICS = {
