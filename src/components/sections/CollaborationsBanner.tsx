@@ -10,7 +10,6 @@ const NATIONAL = [
   { name: 'SRM Institute of Science and Technology', logo: '/images/collaborators/srm.png', url: 'https://www.srmist.edu.in/' },
   { name: 'Bharathidasan University', logo: '/images/collaborators/bharathidasan.png', url: 'https://www.bdu.ac.in/' },
   { name: 'Kodaikanal Solar Observatory (IIA)', logo: '/images/collaborators/iia.png', url: 'https://www.iiap.res.in/' },
-  { name: 'VIT Chennai', logo: '/images/collaborators/vit.png', url: 'https://chennai.vit.ac.in/' },
   { name: 'Periyar University', logo: '/images/collaborators/periyar.png', url: 'https://www.periyaruniversity.ac.in/' },
 ];
 
