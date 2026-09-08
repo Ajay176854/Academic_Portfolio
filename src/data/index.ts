@@ -6,4 +6,3 @@ export { AWARDS } from './awards';
 export { GRANTS } from './grants';
 export { ACCOMPLISHMENTS, INSTRUMENTS } from './research';
 export { STUDENTS, SERVICES, WORKSHOPS, LANGUAGES } from './people';
-export { REFERENCES } from './references';

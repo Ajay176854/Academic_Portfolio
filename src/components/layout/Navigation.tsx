@@ -1,15 +1,17 @@
-import { useState, useEffect, MouseEvent } from 'react';
+import { useState, useEffect, MouseEvent, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, GraduationCap } from 'lucide-react';
 import { PROFILE } from '../../data';
 import { NavSectionId } from '../../types';
 
-const NAV_LINKS: { name: string; href: string; id: NavSectionId }[] = [
-  { name: 'About & Stats', href: '#about', id: 'about' },
+type NavItem = { name: string; desktopLabel?: ReactNode; href: string; id: NavSectionId };
+
+const NAV_LINKS: NavItem[] = [
+  { name: 'About & Stats', desktopLabel: <>About<br/>&amp;&nbsp;Stats</>, href: '#about', id: 'about' },
   { name: 'Breakthroughs', href: '#research', id: 'breakthroughs' },
   { name: 'Publications', href: '#publications', id: 'publications' },
-  { name: 'Grants & Funding', href: '#grants', id: 'grants' },
-  { name: 'Mentorship & Services', href: '#services', id: 'awards-services' },
+  { name: 'Grants & Funding', desktopLabel: <>Grants<br/>&amp;&nbsp;Funding</>, href: '#grants', id: 'grants' },
+  { name: 'Mentorship & Services', desktopLabel: <>Mentorship<br/>&amp;&nbsp;Services</>, href: '#services', id: 'awards-services' },
   { name: 'Gallery', href: '#gallery', id: 'gallery' },
   { name: 'Contact', href: '#contact', id: 'contact' },
 ];
@@ -46,7 +48,7 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center lg:-translate-x-8 xl:-translate-x-12">
         {/* Scholar Brand Name */}
         <a 
           href="#about" 
@@ -77,7 +79,7 @@ export function Navigation({ activeNav, updateActiveNav }: NavigationProps) {
                 }`}
                 id={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                {link.name}
+                {link.desktopLabel || link.name}
               </a>
             );
           })}

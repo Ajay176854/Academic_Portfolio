@@ -10,7 +10,7 @@ export const PROFILE: ProfileData = {
   address: "Thermoelectric Research Lab, Dept. of Inorganic Chemistry, AGH University of Kraków, al. Mickiewicza 30, 30-059 Kraków, Poland",
   scholar: "https://scholar.google.com/citations?user=NeBT4L0AAAAJ",
   orcid: "https://orcid.org/0000-0002-5199-109X",
-  linkedin: "https://lnkd.in/gY5gUk-9"
+  linkedin: "https://www.linkedin.com/in/abinaya-rengarajan-/"
 };
 
 export const METRICS = {

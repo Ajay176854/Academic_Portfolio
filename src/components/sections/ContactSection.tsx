@@ -300,7 +300,7 @@ export function ContactSection() {
                 </h4>
                 <p className="text-sm text-[#475569] leading-relaxed max-w-sm mx-auto">
                   Thank you, <strong>{name}</strong>. Your scholarly query regarding 
-                  <strong> {subject}</strong> has been simulation-delivered to Dr. Abinaya Rengarajan.
+                  <strong> {subject}</strong> has been successfully delivered.
                 </p>
               </div>
               <button

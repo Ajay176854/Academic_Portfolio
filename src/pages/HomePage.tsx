@@ -7,7 +7,7 @@ import { PublicationsList } from '../components/sections/PublicationsList';
 import { GrantsList } from '../components/sections/GrantsList';
 import { PeopleAndServices } from '../components/sections/PeopleAndServices';
 import { ContactSection } from '../components/sections/ContactSection';
-import { ReferencesSection } from '../components/sections/ReferencesSection';
+import { ExpertiseSection } from '../components/sections/ExpertiseSection';
 import { EDUCATION, EXPERIENCE, AWARDS } from '../data';
 import { GraduationCap, Briefcase, Award as TrophyIcon, Mail, Image } from 'lucide-react';
 import { NavSectionId } from '../types';
@@ -252,8 +252,8 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
       {/* Collaborations, Funding Agencies & Publishers Banner */}
       <CollaborationsBanner />
 
-      {/* Professional References Catalog */}
-      <ReferencesSection />
+      {/* Technical Expertise & Research Focus */}
+      <ExpertiseSection updateActiveNav={updateActiveNav} />
     </>
   );
 }
