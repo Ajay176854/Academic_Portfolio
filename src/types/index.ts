@@ -86,3 +86,12 @@ export interface ProfileData {
   orcid?: string;
   linkedin?: string;
 }
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  description?: string;
+  imageUrl: string;
+  date?: string;
+  category?: string;
+}

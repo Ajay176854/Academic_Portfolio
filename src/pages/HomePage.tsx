@@ -8,7 +8,7 @@ import { GrantsList } from '../components/sections/GrantsList';
 import { PeopleAndServices } from '../components/sections/PeopleAndServices';
 import { ContactSection } from '../components/sections/ContactSection';
 import { ExpertiseSection } from '../components/sections/ExpertiseSection';
-import { EDUCATION, EXPERIENCE, AWARDS } from '../data';
+import { EDUCATION, EXPERIENCE, AWARDS, GALLERY } from '../data';
 import { GraduationCap, Briefcase, Award as TrophyIcon, Mail, Image } from 'lucide-react';
 import { NavSectionId } from '../types';
 
@@ -225,19 +225,48 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                 )}
 
                 {activeTab === 'gallery' && (
-                  <div className="bg-white p-10 md:p-16 rounded-2xl border border-[#3B82F6]/20 shadow-2xs text-center space-y-6">
-                    <div className="w-16 h-16 bg-[#3B82F6]/10 text-[#1E3A8A] rounded-2xl flex items-center justify-center mx-auto">
-                      <Image size={32} />
-                    </div>
-                    <div className="max-w-md mx-auto space-y-2">
+                  <div className="space-y-8">
+                    <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
+                      <div className="w-16 h-16 bg-[#3B82F6]/10 text-[#1E3A8A] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <Image size={32} />
+                      </div>
                       <h3 className="text-xl font-serif font-extrabold text-[#0F172A]">Research & Event Gallery</h3>
                       <p className="text-xs md:text-sm text-[#475569] leading-relaxed">
-                        Photos from international conferences, laboratory research experiments, award ceremonies, and academic visits will be showcased here shortly.
+                        Photos from international conferences, laboratory research experiments, award ceremonies, and academic visits.
                       </p>
                     </div>
-                    <span className="inline-block text-xs font-mono font-bold bg-blue-50 text-[#1E3A8A] border border-[#3B82F6]/20 px-4 py-1.5 rounded-full">
-                      Photos Coming Soon
-                    </span>
+
+                    {GALLERY && GALLERY.length > 0 ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {GALLERY.map((item) => (
+                          <div key={item.id} className="bg-white rounded-xl overflow-hidden border border-[#3B82F6]/20 shadow-sm hover:shadow-md transition-shadow group">
+                            <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                              <img
+                                src={item.imageUrl}
+                                alt={item.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                            <div className="p-4 space-y-1">
+                              {item.category && (
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-[#3B82F6]">{item.category}</span>
+                              )}
+                              <h4 className="font-bold text-[#0F172A] text-sm">{item.title}</h4>
+                              {item.description && (
+                                <p className="text-xs text-[#475569] line-clamp-2">{item.description}</p>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="bg-white p-10 md:p-16 rounded-2xl border border-[#3B82F6]/20 shadow-2xs text-center">
+                        <span className="inline-block text-xs font-mono font-bold bg-blue-50 text-[#1E3A8A] border border-[#3B82F6]/20 px-4 py-1.5 rounded-full">
+                          Photos Coming Soon
+                        </span>
+                      </div>
+                    )}
                   </div>
                 )}
 
