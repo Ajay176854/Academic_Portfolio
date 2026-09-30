@@ -123,7 +123,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img 
                                   src={exp.logo} 
                                   alt={`${exp.institution} Logo`} 
-                                  className="h-16 sm:h-20 w-auto max-w-[200px] sm:max-w-[240px] object-contain bg-white p-2 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
+                                  className="h-20 sm:h-28 w-auto max-w-[200px] sm:max-w-[240px] object-contain bg-white p-2 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
                                   referrerPolicy="no-referrer"
                                 />
                               </div>
@@ -162,7 +162,7 @@ export default function HomePage({ activeNav, updateActiveNav }: HomePageProps) 
                                 <img 
                                   src={edu.logo} 
                                   alt={`${edu.institution} Logo`} 
-                                  className="h-16 sm:h-20 w-auto max-w-[200px] sm:max-w-[240px] object-contain bg-white p-2 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
+                                  className="h-20 sm:h-28 w-auto max-w-[200px] sm:max-w-[240px] object-contain bg-white p-2 rounded-lg border border-[#3B82F6]/20 shadow-2xs group-hover:border-[#3B82F6]/40"
                                   referrerPolicy="no-referrer"
                                 />
                               </div>

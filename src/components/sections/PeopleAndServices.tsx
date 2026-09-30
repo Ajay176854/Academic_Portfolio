@@ -10,12 +10,11 @@ export function PeopleAndServices() {
         <div className="flex items-center gap-2 border-b border-[#3B82F6]/20 pb-2">
           <Users className="text-[#3B82F6]" size={20} />
           <h3 className="text-lg font-bold text-[#0F172A]">
-            Co-Supervision & Mentorship (Ph.D.)
+            Co-Supervision & Mentorship
           </h3>
         </div>
         <p className="text-sm text-[#475569] font-medium leading-relaxed max-w-2xl">
-          Co-supervised four Ph.D. scholars at SRM Institute of Science and Technology (2021–2024) 
-          focusing on thermoelectric nanomaterial syntheses, generating high-impact co-authored publications.
+          Co-supervised four Ph.D. scholars at SRM Institute of Science and Technology and mentored B.Sc. students at Shizuoka University, focusing on thermoelectric nanomaterial syntheses.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

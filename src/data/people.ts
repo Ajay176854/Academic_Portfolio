@@ -35,6 +35,14 @@ export const STUDENTS: Student[] = [
     period: "2021-2024", 
     currentPosition: "Postdoctoral Researcher, Toyota Technological Institute, Japan",
     publicationsNote: "Joint publications in J. Alloys Compd., Applied Surface Sci." 
+  },
+  { 
+    id: "std-5", 
+    name: "Miss. Akane Furukawa", 
+    degree: "B.Sc.", 
+    institution: "Shizuoka University, Japan", 
+    period: "Past", 
+    publicationsNote: "Topic: Molybdenum disulfide polyaniline composite for thermoelectric" 
   }
 ];
 

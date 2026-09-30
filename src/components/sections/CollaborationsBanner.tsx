@@ -8,9 +8,6 @@ const INTERNATIONAL = [
 
 const NATIONAL = [
   { name: 'SRM Institute of Science and Technology', logo: '/images/collaborators/srm.png', url: 'https://www.srmist.edu.in/' },
-  { name: 'Bharathidasan University', logo: '/images/collaborators/bharathidasan.png', url: 'https://www.bdu.ac.in/' },
-  { name: 'Kodaikanal Solar Observatory (IIA)', logo: '/images/collaborators/iia.png', url: 'https://www.iiap.res.in/' },
-  { name: 'Periyar University', logo: '/images/collaborators/periyar.png', url: 'https://www.periyaruniversity.ac.in/' },
 ];
 
 const FUNDING_AGENCIES = [
@@ -21,13 +18,11 @@ const FUNDING_AGENCIES = [
 ];
 
 const HIGH_IMPACT_JOURNALS = [
-  { name: 'Applied Physics Letters (APL)', logo: '/images/publishers/apl.png', url: 'https://pubs.aip.org/aip/apl' },
-  { name: 'Journal of Physical Chemistry Letters (JPCL)', logo: '/images/publishers/jpcl.png', url: 'https://pubs.acs.org/journal/jpclcd' },
-  { name: 'Small (Wiley-VCH)', logo: '/images/publishers/small.png', url: 'https://onlinelibrary.wiley.com/journal/16136829' },
-  { name: 'Chemical Engineering Journal (CEJ)', logo: '/images/publishers/cej.png', url: 'https://www.sciencedirect.com/journal/chemical-engineering-journal' },
+  { name: 'AIP Publishing (APL)', logo: '/images/publishers/apl.png', url: 'https://pubs.aip.org/aip/apl' },
   { name: 'American Chemical Society (ACS)', logo: '/images/publishers/acs.png', url: 'https://pubs.acs.org/' },
+  { name: 'Wiley (Small)', logo: '/images/publishers/small.png', url: 'https://onlinelibrary.wiley.com/journal/16136829' },
+  { name: 'Chemical Engineering Journal (CEJ)', logo: '/images/publishers/cej.png', url: 'https://www.sciencedirect.com/journal/chemical-engineering-journal' },
   { name: 'Royal Society of Chemistry (RSC)', logo: '/images/publishers/rsc.png', url: 'https://pubs.rsc.org/' },
-  { name: 'Wiley Advanced Materials', logo: '/images/publishers/wiley-advmat.png', url: 'https://onlinelibrary.wiley.com/journal/2365709x' },
 ];
 
 const ACADEMIC_INDEXES = [
@@ -119,7 +114,7 @@ export function CollaborationsBanner() {
           {/* High Impact & Nature Index Publications - Row 1 */}
           <div>
             <h3 className="text-center text-xs font-mono font-bold uppercase tracking-widest text-blue-700 mb-6 border-b border-blue-500/20 pb-3">
-              High-Impact &amp; Nature Index Journal Publications (APL, JPCL, Small, CEJ, ACS, RSC)
+              High-Impact &amp; Nature Index Journal Publications (AIP, ACS, Wiley, RSC, CEJ)
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               {HIGH_IMPACT_JOURNALS.map((pub, idx) => (

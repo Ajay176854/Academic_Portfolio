@@ -6,7 +6,7 @@ export const EXPERIENCE: Experience[] = [
     role: "Research Assistant Professor",
     institution: "AGH University of Kraków, Kraków, Poland",
     period: "May 2024 – Present",
-    details: "Thermoelectric Research Laboratory. Supervisor: Prof. Krzysztof T. Wojciechowski. Research on 2D nanomaterials for high-efficiency thermoelectric modules.",
+    details: "Thermoelectric Research Laboratory. Research on 2D nanomaterials for high-efficiency thermoelectric modules.",
     logo: "/images/logos/agh-wide.png"
   },
   {
