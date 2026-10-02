@@ -60,6 +60,7 @@ export const SERVICES = [
 export const WORKSHOPS = [
   "Regular participant in weekly and monthly group and departmental seminars across Poland, India and Japan",
   "Delivered seminar at SRM IST (2019 & 2021), Chennai, India",
+  "Delivered Special Address: 'The Unseen Engine: How Pure Physics Drives Modern Innovation (And Where It Can Take You)' at One Day International Seminar, Athoor Cooperative Arts and Science College, India (Oct 2026)",
   "Delivered Seminar at AGH WiMiC department (Nov 2024), Kraków, Poland",
   "Delivered Seminar 'Application of artificial intelligence in simulation and control of metallurgical processes: NeuroMet2025', Kraków, Poland",
   "Completed professional development: 'Nature Masterclass courses on research paper writing & review writing' (2024)",
